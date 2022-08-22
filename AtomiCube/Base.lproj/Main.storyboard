@@ -16,57 +16,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suu-OC-hNT">
-                                <rect key="frame" x="39" y="539" width="336" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOt-gZ-PgJ" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
+                                <rect key="frame" x="20" y="144" width="374" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🙂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTV-ZU-no1">
-                                        <rect key="frame" x="125" y="-46" width="86" height="96"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="go2-q1-PpN">
+                                        <rect key="frame" x="40" y="29.5" width="294" height="71.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 30 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djY-Dl-7g6">
+                                                <rect key="frame" x="69" y="0.0" width="156.5" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MF9-9f-rGX">
+                                                <rect key="frame" x="0.0" y="35.5" width="294" height="36"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziQ-PV-Py1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y9e-IB-SOx">
+                                                        <rect key="frame" x="44" y="16" width="206" height="4"/>
+                                                    </progressView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-tD-V5A">
+                                                        <rect key="frame" x="260" y="0.0" width="34" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="MF9-9f-rGX" firstAttribute="leading" secondItem="go2-q1-PpN" secondAttribute="leading" id="IDK-JG-FLR"/>
+                                            <constraint firstAttribute="trailing" secondItem="MF9-9f-rGX" secondAttribute="trailing" id="cD5-X9-VGw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91379296779999997" green="0.9135395288" blue="0.92156976459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="go2-q1-PpN" firstAttribute="centerY" secondItem="yOt-gZ-PgJ" secondAttribute="centerY" id="BeB-AK-o2c"/>
+                                    <constraint firstAttribute="height" constant="130" id="GJf-q6-7rM"/>
+                                    <constraint firstItem="go2-q1-PpN" firstAttribute="leading" secondItem="yOt-gZ-PgJ" secondAttribute="leading" constant="40" id="MIn-9l-4Pt"/>
+                                    <constraint firstItem="go2-q1-PpN" firstAttribute="centerX" secondItem="yOt-gZ-PgJ" secondAttribute="centerX" id="qJl-dn-4g3"/>
+                                    <constraint firstAttribute="trailing" secondItem="go2-q1-PpN" secondAttribute="trailing" constant="40" id="xVg-DS-CSV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suu-OC-hNT" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
+                                <rect key="frame" x="20" y="602" width="374" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTV-ZU-no1">
+                                        <rect key="frame" x="144" y="-50" width="86" height="95.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
-                                        <rect key="frame" x="21" y="90" width="294" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
+                                        <rect key="frame" x="38" y="65" width="298" height="31"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pOA-Au-BAr"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bxS-QH-bex" secondAttribute="trailing" constant="40" id="4RV-OL-WGT"/>
+                                    <constraint firstItem="UTV-ZU-no1" firstAttribute="centerX" secondItem="suu-OC-hNT" secondAttribute="centerX" id="8da-Ld-EbI"/>
+                                    <constraint firstItem="bxS-QH-bex" firstAttribute="leading" secondItem="suu-OC-hNT" secondAttribute="leading" constant="40" id="FbV-Pi-bHW"/>
+                                    <constraint firstItem="bxS-QH-bex" firstAttribute="centerX" secondItem="suu-OC-hNT" secondAttribute="centerX" id="QHh-L1-USO"/>
+                                    <constraint firstItem="bxS-QH-bex" firstAttribute="centerY" secondItem="suu-OC-hNT" secondAttribute="centerY" id="fmy-5j-Vqw"/>
+                                    <constraint firstItem="UTV-ZU-no1" firstAttribute="top" secondItem="suu-OC-hNT" secondAttribute="top" constant="-50" id="nbq-LH-wPc"/>
+                                    <constraint firstAttribute="height" constant="160" id="olo-Eb-uSb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y9e-IB-SOx">
-                                <rect key="frame" x="80" y="215" width="254" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اخر ٣٠ يوم" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djY-Dl-7g6">
-                                <rect key="frame" x="150" y="171" width="114" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-tD-V5A">
-                                <rect key="frame" x="342" y="199" width="34" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🤬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziQ-PV-Py1">
-                                <rect key="frame" x="39" y="199" width="34" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="suu-OC-hNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6dE-3Y-qcM"/>
+                            <constraint firstItem="suu-OC-hNT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7d9-LC-PpQ"/>
+                            <constraint firstItem="yOt-gZ-PgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ocu-cH-ODv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="suu-OC-hNT" secondAttribute="bottom" constant="100" id="VIC-iU-gKe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yOt-gZ-PgJ" secondAttribute="trailing" constant="20" id="aKN-VC-Fny"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="suu-OC-hNT" secondAttribute="trailing" constant="20" id="ot8-rm-Pxz"/>
+                            <constraint firstItem="yOt-gZ-PgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sg6-Dt-nHW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageMood" destination="UTV-ZU-no1" id="zdk-9g-fD3"/>
+                        <outlet property="sliderMood" destination="bxS-QH-bex" id="PKA-uj-TtT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
+            <point key="canvasLocation" x="-101" y="80"/>
         </scene>
     </scenes>
     <resources>
