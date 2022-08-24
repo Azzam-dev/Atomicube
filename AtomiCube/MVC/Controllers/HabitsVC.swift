@@ -6,31 +6,57 @@
 //
 
 import UIKit
+import ReSwift
 
-class HabitsVC: UIViewController {
+class HabitsVC: UIViewController, StoreSubscriber {
 
+    @IBOutlet var habitsProgress: [UIProgressView]!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+           mainStore.subscribe(self)
+       }
+
+       override func viewWillDisappear(_ animated: Bool) {
+           mainStore.unsubscribe(self)
+       }
+
+       func newState(state: AppState) {
+           print("list my Habits:", state.habits)
+           for (i, habit) in state.habits.enumerated()  {
+               habitsProgress[i].progress = habit ? 1.0 : 0.0
+           }
+       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //غير لون الخلفيه الى احمر
-        view.backgroundColor = .red
+        
         // Do any additional setup after loading the view.
     }
     
 
-    @IBAction func didChangeHabit1(_ sender: Any) {
-        view.backgroundColor = .blue
+    @IBAction func didChangeHabit1(_ sender: UISwitch) {
+        sender.isOn ?
+        mainStore.dispatch(HabitActionComplete(completedHabit: .first)) :
+        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .first))
     }
     
 
     
-    @IBAction func didChangeHabit2(_ sender: Any) {
-        view.backgroundColor = .green
+    @IBAction func didChangeHabit2(_ sender: UISwitch) {
+        sender.isOn ?
+        mainStore.dispatch(HabitActionComplete(completedHabit: .second)) :
+        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .second))
+        
     }
   
     
-    @IBAction func didChangeHabit3(_ sender: Any) {
-        view.backgroundColor = .orange
+    @IBAction func didChangeHabit3(_ sender: UISwitch) {
+        sender.isOn ?
+        mainStore.dispatch(HabitActionComplete(completedHabit: .third)) :
+        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .third))
+        
     }
 
     
