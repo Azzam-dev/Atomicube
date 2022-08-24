@@ -99,6 +99,45 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		215365CD28B5C75C006D6CCF /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				215365D128B5CE41006D6CCF /* Store */,
+				215365D028B5CE39006D6CCF /* State */,
+				215365CF28B5CE31006D6CCF /* Actions */,
+				215365CE28B5CE29006D6CCF /* Reducers */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		215365CE28B5CE29006D6CCF /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		215365CF28B5CE31006D6CCF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		215365D028B5CE39006D6CCF /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		215365D128B5CE41006D6CCF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		21EB65EC28B1764C0045C3BB = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				215365CA28B5B77B006D6CCF /* App */,
+				215365CD28B5C75C006D6CCF /* Redux */,
 				215365C628B5B723006D6CCF /* MVC */,
 				4E8F25AD28B3E41400CFE8A9 /* Extensions */,
 				21EB660128B1764D0045C3BB /* Assets.xcassets */,
