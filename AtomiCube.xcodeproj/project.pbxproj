@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21827ADD28B6CF8D00C984BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADC28B6CF8D00C984BF /* Store.swift */; };
+		21827ADF28B6CFD200C984BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADE28B6CFD200C984BF /* AppState.swift */; };
+		21827AE128B6CFEA00C984BF /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE028B6CFEA00C984BF /* Actions.swift */; };
+		21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE228B6CFFD00C984BF /* AppReducer.swift */; };
+		21827AE628B6D20900C984BF /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21827AE528B6D20900C984BF /* ReSwift */; };
+		21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE728B6D34000C984BF /* CounterReducer.swift */; };
 		21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65F828B1764C0045C3BB /* AppDelegate.swift */; };
 		21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */; };
 		21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FC28B1764C0045C3BB /* PlayVC.swift */; };
@@ -19,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21827ADC28B6CF8D00C984BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		21827ADE28B6CFD200C984BF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		21827AE028B6CFEA00C984BF /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		21827AE228B6CFFD00C984BF /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		21827AE728B6D34000C984BF /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		21EB65F528B1764C0045C3BB /* AtomiCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomiCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EB65F828B1764C0045C3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21827AE628B6D20900C984BF /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,8 @@
 		215365CE28B5CE29006D6CCF /* Reducers */ = {
 			isa = PBXGroup;
 			children = (
+				21827AE228B6CFFD00C984BF /* AppReducer.swift */,
+				21827AE728B6D34000C984BF /* CounterReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 		215365CF28B5CE31006D6CCF /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				21827AE028B6CFEA00C984BF /* Actions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 		215365D028B5CE39006D6CCF /* State */ = {
 			isa = PBXGroup;
 			children = (
+				21827ADE28B6CFD200C984BF /* AppState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -140,8 +156,16 @@
 		215365D128B5CE41006D6CCF /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				21827ADC28B6CF8D00C984BF /* Store.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		21827ADB28B6CEF200C984BF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		21EB65EC28B1764C0045C3BB = {
@@ -166,6 +190,7 @@
 				215365CA28B5B77B006D6CCF /* App */,
 				215365CD28B5C75C006D6CCF /* Redux */,
 				215365C628B5B723006D6CCF /* MVC */,
+				21827ADB28B6CEF200C984BF /* Networking */,
 				4E8F25AD28B3E41400CFE8A9 /* Extensions */,
 				21EB660128B1764D0045C3BB /* Assets.xcassets */,
 			);
@@ -196,6 +221,9 @@
 			dependencies = (
 			);
 			name = AtomiCube;
+			packageProductDependencies = (
+				21827AE528B6D20900C984BF /* ReSwift */,
+			);
 			productName = AtomiCube;
 			productReference = 21EB65F528B1764C0045C3BB /* AtomiCube.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 21EB65EC28B1764C0045C3BB;
+			packageReferences = (
+				21827AE428B6D20900C984BF /* XCRemoteSwiftPackageReference "ReSwift" */,
+			);
 			productRefGroup = 21EB65F628B1764C0045C3BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -251,12 +282,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
+=======
+				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
+>>>>>>> Stashed changes
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */,
+				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
+				21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
+				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
+				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +517,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21827AE428B6D20900C984BF /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21827AE528B6D20900C984BF /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21827AE428B6D20900C984BF /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21EB65ED28B1764C0045C3BB /* Project object */;
 }
