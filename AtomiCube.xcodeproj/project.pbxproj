@@ -14,6 +14,7 @@
 		21EB660228B1764D0045C3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EB660128B1764D0045C3BB /* Assets.xcassets */; };
 		21EB660528B1764D0045C3BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EB660328B1764D0045C3BB /* LaunchScreen.storyboard */; };
 		3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80128B5EDC500A230D3 /* HabitsVC.swift */; };
+		3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80328B5F39100A230D3 /* DayRatingVC.swift */; };
 		4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		21EB660428B1764D0045C3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21EB660628B1764D0045C3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3496E80128B5EDC500A230D3 /* HabitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsVC.swift; sourceTree = "<group>"; };
+		3496E80328B5F39100A230D3 /* DayRatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingVC.swift; sourceTree = "<group>"; };
 		4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 			children = (
 				21EB65FC28B1764C0045C3BB /* PlayVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
+				3496E80328B5F39100A230D3 /* DayRatingVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */,
