@@ -15,9 +15,14 @@
 
 import ReSwift
 
-typealias LoginAction = Action
-struct LoginActionSuccessful: LoginAction {}
+struct CounterActionIncrease: Action {}
+struct CounterActionDecrease: Action {}
 
-typealias CounterAction = Action
-struct CounterActionIncrease: CounterAction {}
-struct CounterActionDecrease: CounterAction {}
+enum Habit: Int {
+    case first
+    case second
+    case third
+}
+
+struct HabitActionComplete: Action { let completedHabit: Habit }
+struct HabitActionUncomplete: Action { let uncompletedHabit: Habit }

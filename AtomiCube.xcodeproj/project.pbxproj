@@ -13,6 +13,7 @@
 		21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE228B6CFFD00C984BF /* AppReducer.swift */; };
 		21827AE628B6D20900C984BF /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21827AE528B6D20900C984BF /* ReSwift */; };
 		21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE728B6D34000C984BF /* CounterReducer.swift */; };
+		21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE928B6DE6100C984BF /* HabitReducer.swift */; };
 		21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65F828B1764C0045C3BB /* AppDelegate.swift */; };
 		21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */; };
 		21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FC28B1764C0045C3BB /* PlayVC.swift */; };
@@ -30,6 +31,7 @@
 		21827AE028B6CFEA00C984BF /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		21827AE228B6CFFD00C984BF /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		21827AE728B6D34000C984BF /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
 		21EB65F528B1764C0045C3BB /* AtomiCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomiCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EB65F828B1764C0045C3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				21827AE228B6CFFD00C984BF /* AppReducer.swift */,
 				21827AE728B6D34000C984BF /* CounterReducer.swift */,
+				21827AE928B6DE6100C984BF /* HabitReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */,
 				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
 				21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */,
+				21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import ReSwift
 
-func counterReducer(action: CounterAction, state: AppState?) -> AppState {
+func counterReducer(action: Action, state: AppState?) -> AppState {
     var state = state ?? AppState()
 
     switch action {

@@ -161,7 +161,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-Eo-7rm">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-Eo-7rm">
                                                         <rect key="frame" x="0.0" y="23.5" width="334" height="4"/>
                                                     </progressView>
                                                 </subviews>
@@ -186,7 +186,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-uO-jLT">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-uO-jLT">
                                                         <rect key="frame" x="0.0" y="23.5" width="334" height="4"/>
                                                     </progressView>
                                                 </subviews>
@@ -211,7 +211,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-tX-sOj">
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-tX-sOj">
                                                         <rect key="frame" x="0.0" y="23.5" width="334" height="4"/>
                                                     </progressView>
                                                 </subviews>
@@ -253,10 +253,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8r-r1-ZAc">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U8r-r1-ZAc">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
                                                         <connections>
-                                                            <action selector="didChangeHabit1:" destination="DwW-J2-mif" eventType="valueChanged" id="ejg-hZ-cw8"/>
+                                                            <action selector="didChangeHabit1:" destination="DwW-J2-mif" eventType="valueChanged" id="Pfa-yb-TRW"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -270,10 +270,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-nd-f7W">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-nd-f7W">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
                                                         <connections>
-                                                            <action selector="didChangeHabit2:" destination="DwW-J2-mif" eventType="valueChanged" id="5rB-L6-e6o"/>
+                                                            <action selector="didChangeHabit2:" destination="DwW-J2-mif" eventType="valueChanged" id="YeV-e3-FU3"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -287,10 +287,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-es-914">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-es-914">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
                                                         <connections>
-                                                            <action selector="didChangeHabit3:" destination="DwW-J2-mif" eventType="valueChanged" id="a6n-xx-Zr0"/>
+                                                            <action selector="didChangeHabit3:" destination="DwW-J2-mif" eventType="valueChanged" id="2t3-PB-Sh4"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -329,6 +329,11 @@
                             <constraint firstItem="CrI-om-GOU" firstAttribute="centerX" secondItem="YhE-3c-YfK" secondAttribute="centerX" id="rYX-je-1zp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="habitsProgress" destination="WbT-Eo-7rm" collectionClass="NSMutableArray" id="HNe-6r-xwC"/>
+                        <outletCollection property="habitsProgress" destination="Q9g-uO-jLT" collectionClass="NSMutableArray" id="4z2-pd-F4g"/>
+                        <outletCollection property="habitsProgress" destination="Tbh-tX-sOj" collectionClass="NSMutableArray" id="7Iz-6F-5Oj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ge4-ny-G6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

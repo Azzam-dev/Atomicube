@@ -24,8 +24,12 @@ func appReducer(action: Action, state: AppState?) -> AppState {
     switch action {
     case _ as CounterActionIncrease:
         state = counterReducer(action: action, state: state)
-    case _ as LoginActionSuccessful:
+    case _ as CounterActionDecrease:
         state = counterReducer(action: action, state: state)
+    case _ as HabitActionComplete:
+        state = habitReducer(action: action, state: state)
+    case _ as HabitActionUncomplete:
+        state = habitReducer(action: action, state: state)
     default:
         break
     }
