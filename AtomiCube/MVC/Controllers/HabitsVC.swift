@@ -6,9 +6,22 @@
 //
 
 import UIKit
+import ReSwift
 
-class HabitsVC: UIViewController {
+class HabitsVC: UIViewController, StoreSubscriber {
 
+    override func viewWillAppear(_ animated: Bool) {
+           mainStore.subscribe(self)
+       }
+
+       override func viewWillDisappear(_ animated: Bool) {
+           mainStore.unsubscribe(self)
+       }
+
+       func newState(state: AppState) {
+           print("the counter value is: \(state.counter)")
+       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,12 +33,14 @@ class HabitsVC: UIViewController {
 
     @IBAction func didChangeHabit1(_ sender: Any) {
         view.backgroundColor = .blue
+        mainStore.dispatch(CounterActionIncrease())
     }
     
 
     
     @IBAction func didChangeHabit2(_ sender: Any) {
         view.backgroundColor = .green
+        mainStore.dispatch(CounterActionDecrease())
     }
   
     

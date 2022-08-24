@@ -282,11 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
-=======
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
->>>>>>> Stashed changes
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21EB65FD28B1764C0045C3BB /* PlayVC.swift in Sources */,
