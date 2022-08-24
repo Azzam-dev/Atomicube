@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayVC.swift
 //  AtomiCube
 //
 //  Created by Azzam AL-Rashed on 20/08/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlayVC: UIViewController {
 
     @IBOutlet weak var sliderMood: UISlider!
     @IBOutlet weak var imageMood: UILabel!
