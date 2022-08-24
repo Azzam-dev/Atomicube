@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DwW-J2-mif">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="-101" y="80"/>
         </scene>
-        <!--View Controller-->
+        <!--HabitsVC-->
         <scene sceneID="VTq-Uw-Gm5">
             <objects>
-                <viewController id="DwW-J2-mif" sceneMemberID="viewController">
+                <viewController id="DwW-J2-mif" customClass="HabitsVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhE-3c-YfK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +255,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8r-r1-ZAc">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="didChangeHabit1:" destination="DwW-J2-mif" eventType="valueChanged" id="ejg-hZ-cw8"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
@@ -269,6 +272,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-nd-f7W">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="didChangeHabit2:" destination="DwW-J2-mif" eventType="valueChanged" id="5rB-L6-e6o"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
@@ -283,6 +289,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-es-914">
                                                         <rect key="frame" x="285" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="didChangeHabit3:" destination="DwW-J2-mif" eventType="valueChanged" id="a6n-xx-Zr0"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
