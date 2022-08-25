@@ -11,6 +11,8 @@ import ReSwift
 class HabitsVC: UIViewController, StoreSubscriber {
 
     @IBOutlet var habitsProgress: [UIProgressView]!
+    @IBOutlet var habitsPercentage: [UILabel]!
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +27,7 @@ class HabitsVC: UIViewController, StoreSubscriber {
            print("list my Habits:", state.habits)
            for (i, habit) in state.habits.enumerated()  {
                habitsProgress[i].progress = habit ? 1.0 : 0.0
+               habitsPercentage[i].text = habit ? "100%" : "0%"
            }
        }
     
