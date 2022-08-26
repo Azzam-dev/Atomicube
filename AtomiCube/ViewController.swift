@@ -8,74 +8,71 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
-    @IBOutlet weak var imageMood: UILabel!
+    @IBOutlet weak var moodEmoji: UILabel!
     
-    var last30DayMood = [Int]()
-    var average = 0
-    var num = 0
+    var allMood: [Float] = UserDefaults.standard.array(forKey: "allMood") as? [Float] ?? [Float]()
+    let lastSliderMoodPosition = UserDefaults.standard.float(forKey: "lastSliderMoodPosition")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        if let savePosition = UserDefaults.standard.value(forKey: "savePosition") {
-            num = Int(savePosition as! Float)
-            sliderMood.value = Float(num)
-            sliderChanged(sliderMood)
-            
-        }
         
-    }
+        sliderMood.value = lastSliderMoodPosition
+        sliderChanged(sliderMood)
         
-    @IBAction func sliderChanged(_ sender: UISlider) {
-        
-        UserDefaults.standard.set(sender.value, forKey: "savePosition")
-        
-        
-        switch sender.value {
-        case 0...25:
-            imageMood.text = "😩"
-            break
-        case 26...45:
-            imageMood.text = "😒"
-            break
-        case 46...55:
-            imageMood.text = "😐"
-            break
-        case 56...75:
-            imageMood.text = "🙂"
-            break
-        case 76...100:
-            imageMood.text = "😊"
-            break
-        default:
-            print("error")
-        }
     }
     
-    @IBAction func saveMood(_ sender: Any) {
+    
+    
+    @IBAction func sliderChanged(_ sender: UISlider) {
         
-        if let savePosition = UserDefaults.standard.value(forKey: "savePosition") {
-            num = Int(savePosition as! Float)
-            sliderMood.value = Float(num)
-            sliderChanged(sliderMood)
-            
+        UserDefaults.standard.set(sender.value, forKey: "lastSliderMoodPosition")
+        
+        
+        allMood.append(sender.value)
+        UserDefaults.standard.set(allMood , forKey: "allMood")
+        
+        
+        //edje cases
+        switch sender.value {
+        case 0...25.9999:
+            moodEmoji.text = "😩"
+        case 26...45.9999:
+            moodEmoji.text = "😒"
+        case 46...55.9999:
+            moodEmoji.text = "😐"
+        case 56...75.9999:
+            moodEmoji.text = "🙂"
+        case 76...100:
+            moodEmoji.text = "😊"
+        default:
+            print("unexpected value for the mood slider")
         }
         
-        last30DayMood.append(num)
-        UserDefaults.standard.set(last30DayMood , forKey: "save")
-        if let days = UserDefaults.standard.value(forKey: "save") as? [Int] {
-            for day in days {
-                average += day
-            }
-            print(average)
-          progressMood.progress = Float(average / last30DayMood.count) / 100
-        }
-        print(last30DayMood)
+        
+        updateProgressMood(withDay: 30)
+        
+        
     }
+    
+    fileprivate func updateProgressMood(withDay day: Int) {
+        let last30DayMood = allMood.suffix(day)
+        var totalMoodValues: Float = 0
+        
+        for dayMoodValue in last30DayMood {
+            totalMoodValues += dayMoodValue
+        }
+        
+        let averageMood = (totalMoodValues / Float(last30DayMood.count)) / 100
+        
+        progressMood.progress = averageMood
+        
+    }
+    
+    
 }
-
