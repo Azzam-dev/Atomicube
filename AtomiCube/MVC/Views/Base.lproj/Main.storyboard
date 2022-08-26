@@ -663,6 +663,9 @@
                             <constraint firstItem="HEK-7E-YS9" firstAttribute="leading" secondItem="Ufq-pU-jQb" secondAttribute="leading" constant="20" id="j0G-IH-1NM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageRating" destination="h2K-TP-Y2T" id="3Ca-bi-zOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VO8-Es-1ei" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

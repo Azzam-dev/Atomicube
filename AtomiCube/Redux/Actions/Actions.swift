@@ -15,9 +15,14 @@
 
 import ReSwift
 
+
+// MARK: actions for Counter
 struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 
+
+
+// MARK: actions for Habits
 enum Habit: Int {
     case first
     case second
@@ -26,3 +31,7 @@ enum Habit: Int {
 
 struct HabitActionComplete: Action { let completedHabit: Habit }
 struct HabitActionUncomplete: Action { let uncompletedHabit: Habit }
+
+
+// MARK: actions for DayRating
+struct DayRatingActionAdd: Action { let rating: Int }
