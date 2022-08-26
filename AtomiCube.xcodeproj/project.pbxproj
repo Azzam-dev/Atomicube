@@ -14,8 +14,10 @@
 		21827AE628B6D20900C984BF /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21827AE528B6D20900C984BF /* ReSwift */; };
 		21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE728B6D34000C984BF /* CounterReducer.swift */; };
 		21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE928B6DE6100C984BF /* HabitReducer.swift */; };
-		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		21827AEC28B88AE300C984BF /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* PlayVC.swift */; };
+		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
+		21DF9C2D28B91732002BDDD3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2C28B91732002BDDD3 /* Realm */; };
+		21DF9C2F28B91732002BDDD3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2E28B91732002BDDD3 /* RealmSwift */; };
 		21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65F828B1764C0045C3BB /* AppDelegate.swift */; };
 		21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */; };
 		21EB660028B1764C0045C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EB65FE28B1764C0045C3BB /* Main.storyboard */; };
@@ -35,8 +37,8 @@
 		21827AE228B6CFFD00C984BF /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		21827AE728B6D34000C984BF /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
-		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
 		21827AEB28B88AE300C984BF /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
 		21EB65F528B1764C0045C3BB /* AtomiCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomiCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EB65F828B1764C0045C3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DF9C2F28B91732002BDDD3 /* RealmSwift in Frameworks */,
+				21DF9C2D28B91732002BDDD3 /* Realm in Frameworks */,
 				21827AE628B6D20900C984BF /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +247,8 @@
 			name = AtomiCube;
 			packageProductDependencies = (
 				21827AE528B6D20900C984BF /* ReSwift */,
+				21DF9C2C28B91732002BDDD3 /* Realm */,
+				21DF9C2E28B91732002BDDD3 /* RealmSwift */,
 			);
 			productName = AtomiCube;
 			productReference = 21EB65F528B1764C0045C3BB /* AtomiCube.app */;
@@ -274,6 +280,7 @@
 			mainGroup = 21EB65EC28B1764C0045C3BB;
 			packageReferences = (
 				21827AE428B6D20900C984BF /* XCRemoteSwiftPackageReference "ReSwift" */,
+				21DF9C2B28B91732002BDDD3 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 21EB65F628B1764C0045C3BB /* Products */;
 			projectDirPath = "";
@@ -548,6 +555,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		21DF9C2B28B91732002BDDD3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -555,6 +570,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 21827AE428B6D20900C984BF /* XCRemoteSwiftPackageReference "ReSwift" */;
 			productName = ReSwift;
+		};
+		21DF9C2C28B91732002BDDD3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DF9C2B28B91732002BDDD3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		21DF9C2E28B91732002BDDD3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21DF9C2B28B91732002BDDD3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
