@@ -26,3 +26,5 @@ enum Habit: Int {
 
 struct HabitActionComplete: Action { let completedHabit: Habit }
 struct HabitActionUncomplete: Action { let uncompletedHabit: Habit }
+
+struct MoodSliderActionDidMove: Action { let moodValue: Float}
