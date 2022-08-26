@@ -23,6 +23,8 @@
 		3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80128B5EDC500A230D3 /* HabitsVC.swift */; };
 		3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80328B5F39100A230D3 /* DayRatingVC.swift */; };
 		4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */; };
+		4E8F25B128B88C1C00CFE8A9 /* JourneyMoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */; };
+		4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		3496E80128B5EDC500A230D3 /* HabitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsVC.swift; sourceTree = "<group>"; };
 		3496E80328B5F39100A230D3 /* DayRatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingVC.swift; sourceTree = "<group>"; };
 		4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
+		4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyMoodVC.swift; sourceTree = "<group>"; };
+		4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				21EB65FC28B1764C0045C3BB /* PlayVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
 				3496E80328B5F39100A230D3 /* DayRatingVC.swift */,
+				4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */,
+				4E8F25B228B88D1D00CFE8A9 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4E8F25B228B88D1D00CFE8A9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,10 +307,12 @@
 				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
 				21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */,
 				21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */,
+				4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
 				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
+				4E8F25B128B88C1C00CFE8A9 /* JourneyMoodVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
