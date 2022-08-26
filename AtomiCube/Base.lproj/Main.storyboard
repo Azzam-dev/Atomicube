@@ -87,7 +87,7 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
                                         <rect key="frame" x="38" y="65" width="298" height="31"/>
                                         <connections>
-                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pOA-Au-BAr"/>
+                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WRE-GL-s5e"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -110,6 +110,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-Vi-Elw">
+                                <rect key="frame" x="167" y="782" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hp3-Qk-kDs"/>
+                                    <constraint firstAttribute="width" constant="80" id="jTo-nI-nko"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="send" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveMood:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lp8-9o-uyI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,12 +136,15 @@
                             <constraint firstItem="yOt-gZ-PgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ocu-cH-ODv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="suu-OC-hNT" secondAttribute="bottom" constant="100" id="VIC-iU-gKe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yOt-gZ-PgJ" secondAttribute="trailing" constant="20" id="aKN-VC-Fny"/>
+                            <constraint firstItem="1Z3-Vi-Elw" firstAttribute="top" secondItem="suu-OC-hNT" secondAttribute="bottom" constant="20" id="fEB-Ic-rMp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="suu-OC-hNT" secondAttribute="trailing" constant="20" id="ot8-rm-Pxz"/>
+                            <constraint firstItem="1Z3-Vi-Elw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pn4-Yq-vZE"/>
                             <constraint firstItem="yOt-gZ-PgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sg6-Dt-nHW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageMood" destination="UTV-ZU-no1" id="zdk-9g-fD3"/>
+                        <outlet property="progressMood" destination="y9e-IB-SOx" id="3PA-NY-yDc"/>
                         <outlet property="sliderMood" destination="bxS-QH-bex" id="PKA-uj-TtT"/>
                     </connections>
                 </viewController>
@@ -137,8 +157,14 @@
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
