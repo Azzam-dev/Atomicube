@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nrf-b4-2SW">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -21,17 +21,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOt-gZ-PgJ" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
                                 <rect key="frame" x="20" y="144" width="350" height="130"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="go2-q1-PpN">
-                                        <rect key="frame" x="40" y="29.33333333333335" width="270" height="71.666666666666686"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="go2-q1-PpN">
+                                        <rect key="frame" x="20" y="24.5" width="295" height="81.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 30 Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djY-Dl-7g6">
-                                                <rect key="frame" x="57.000000000000014" y="0.0" width="156.33333333333337" height="35.666666666666664"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 30 Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djY-Dl-7g6">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MF9-9f-rGX">
-                                                <rect key="frame" x="35" y="35.666666666666657" width="200" height="36"/>
+                                                <rect key="frame" x="0.0" y="45.5" width="295" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤬" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziQ-PV-Py1">
                                                         <rect key="frame" x="0.0" y="0.0" width="34" height="36"/>
@@ -40,10 +40,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y9e-IB-SOx">
-                                                        <rect key="frame" x="44" y="16" width="112" height="4"/>
+                                                        <rect key="frame" x="44" y="16" width="207" height="4"/>
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-tD-V5A">
-                                                        <rect key="frame" x="166" y="0.0" width="34" height="36"/>
+                                                        <rect key="frame" x="261" y="0.0" width="34" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                 <constraints>
                                     <constraint firstItem="go2-q1-PpN" firstAttribute="centerY" secondItem="yOt-gZ-PgJ" secondAttribute="centerY" id="BeB-AK-o2c"/>
                                     <constraint firstAttribute="height" constant="130" id="GJf-q6-7rM"/>
-                                    <constraint firstItem="go2-q1-PpN" firstAttribute="leading" secondItem="yOt-gZ-PgJ" secondAttribute="leading" constant="40" id="MIn-9l-4Pt"/>
+                                    <constraint firstItem="go2-q1-PpN" firstAttribute="leading" secondItem="yOt-gZ-PgJ" secondAttribute="leading" constant="20" id="MIn-9l-4Pt"/>
                                     <constraint firstItem="go2-q1-PpN" firstAttribute="centerX" secondItem="yOt-gZ-PgJ" secondAttribute="centerX" id="qJl-dn-4g3"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -81,8 +81,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
-                                        <rect key="frame" x="38" y="65" width="274" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
+                                        <rect key="frame" x="38" y="65" width="259" height="31"/>
                                         <connections>
                                             <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pOA-Au-BAr"/>
                                         </connections>
@@ -119,7 +119,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageMood" destination="UTV-ZU-no1" id="zdk-9g-fD3"/>
+                        <outlet property="moodEmoji" destination="UTV-ZU-no1" id="PPf-wX-xcm"/>
+                        <outlet property="progressMood" destination="y9e-IB-SOx" id="Lc5-JP-Z82"/>
                         <outlet property="sliderMood" destination="bxS-QH-bex" id="PKA-uj-TtT"/>
                     </connections>
                 </viewController>
