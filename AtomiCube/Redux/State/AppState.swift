@@ -18,4 +18,6 @@ struct AppState {
     
     var habits: [Bool] = [false, false, false]
     
+    var dayRatings = [Int]()
+    
 }

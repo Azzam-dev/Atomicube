@@ -30,6 +30,8 @@ func appReducer(action: Action, state: AppState?) -> AppState {
         state = habitReducer(action: action, state: state)
     case _ as HabitActionUncomplete:
         state = habitReducer(action: action, state: state)
+    case _ as DayRatingActionAdd:
+        state = dayRatingReducer(action: action, state: state)
     default:
         break
     }
