@@ -18,6 +18,13 @@
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		21DF9C2D28B91732002BDDD3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2C28B91732002BDDD3 /* Realm */; };
 		21DF9C2F28B91732002BDDD3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2E28B91732002BDDD3 /* RealmSwift */; };
+		21DF9C3528B9196C002BDDD3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3428B9196C002BDDD3 /* DataModel.swift */; };
+		21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */; };
+		21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */; };
+		21DF9C3C28B91BE9002BDDD3 /* DayRatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3B28B91BE9002BDDD3 /* DayRatingViewModel.swift */; };
+		21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4328BA34D2002BDDD3 /* FireBaseRepo.swift */; };
+		21DF9C4628BA34E0002BDDD3 /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4528BA34E0002BDDD3 /* RealmRepo.swift */; };
+		21DF9C4828BA34EF002BDDD3 /* UserDefaultsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4728BA34EF002BDDD3 /* UserDefaultsRepo.swift */; };
 		21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65F828B1764C0045C3BB /* AppDelegate.swift */; };
 		21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */; };
 		21EB660028B1764C0045C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EB65FE28B1764C0045C3BB /* Main.storyboard */; };
@@ -39,6 +46,13 @@
 		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
 		21827AEB28B88AE300C984BF /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
+		21DF9C3428B9196C002BDDD3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
+		21DF9C3B28B91BE9002BDDD3 /* DayRatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingViewModel.swift; sourceTree = "<group>"; };
+		21DF9C4328BA34D2002BDDD3 /* FireBaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseRepo.swift; sourceTree = "<group>"; };
+		21DF9C4528BA34E0002BDDD3 /* RealmRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
+		21DF9C4728BA34EF002BDDD3 /* UserDefaultsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepo.swift; sourceTree = "<group>"; };
 		21EB65F528B1764C0045C3BB /* AtomiCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomiCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EB65F828B1764C0045C3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,20 +84,11 @@
 		215365C628B5B723006D6CCF /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				215365C728B5B736006D6CCF /* Models */,
+				21DF9C3228B91941002BDDD3 /* Models */,
 				215365C828B5B741006D6CCF /* Views */,
 				215365C928B5B750006D6CCF /* Controllers */,
 			);
 			path = MVC;
-			sourceTree = "<group>";
-		};
-		215365C728B5B736006D6CCF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				215365CB28B5B8A7006D6CCF /* DataModels */,
-				215365CC28B5B8B5006D6CCF /* ViewModels */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		215365C828B5B741006D6CCF /* Views */ = {
@@ -115,20 +120,6 @@
 				21EB660628B1764D0045C3BB /* Info.plist */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		215365CB28B5B8A7006D6CCF /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModels;
-			sourceTree = "<group>";
-		};
-		215365CC28B5B8B5006D6CCF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		215365CD28B5C75C006D6CCF /* Redux */ = {
@@ -177,11 +168,65 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
-		21827ADB28B6CEF200C984BF /* Networking */ = {
+		21DF9C3228B91941002BDDD3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				21DF9C3328B91952002BDDD3 /* DataModels */,
+				21DF9C3628B91972002BDDD3 /* ViewModels */,
 			);
-			path = Networking;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21DF9C3328B91952002BDDD3 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C3428B9196C002BDDD3 /* DataModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		21DF9C3628B91972002BDDD3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */,
+				21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */,
+				21DF9C3B28B91BE9002BDDD3 /* DayRatingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		21DF9C3D28BA153B002BDDD3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C4028BA347B002BDDD3 /* UserDefaults */,
+				21DF9C4228BA349D002BDDD3 /* Firebase */,
+				21DF9C4128BA3495002BDDD3 /* Realm */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		21DF9C4028BA347B002BDDD3 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C4728BA34EF002BDDD3 /* UserDefaultsRepo.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		21DF9C4128BA3495002BDDD3 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C4528BA34E0002BDDD3 /* RealmRepo.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		21DF9C4228BA349D002BDDD3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				21DF9C4328BA34D2002BDDD3 /* FireBaseRepo.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		21EB65EC28B1764C0045C3BB = {
@@ -204,9 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				215365CA28B5B77B006D6CCF /* App */,
-				215365CD28B5C75C006D6CCF /* Redux */,
 				215365C628B5B723006D6CCF /* MVC */,
-				21827ADB28B6CEF200C984BF /* Networking */,
+				215365CD28B5C75C006D6CCF /* Redux */,
+				21DF9C3D28BA153B002BDDD3 /* Repositories */,
 				4E8F25AD28B3E41400CFE8A9 /* Extensions */,
 				21EB660128B1764D0045C3BB /* Assets.xcassets */,
 			);
@@ -310,19 +355,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
+				21DF9C3C28B91BE9002BDDD3 /* DayRatingViewModel.swift in Sources */,
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
+				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
+				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
 				21827AEC28B88AE300C984BF /* PlayVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
 				21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */,
 				21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */,
+				21DF9C4628BA34E0002BDDD3 /* RealmRepo.swift in Sources */,
+				21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */,
 				4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
+				21DF9C3528B9196C002BDDD3 /* DataModel.swift in Sources */,
 				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
+				21DF9C4828BA34EF002BDDD3 /* UserDefaultsRepo.swift in Sources */,
 				4E8F25B128B88C1C00CFE8A9 /* JourneyMoodVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
