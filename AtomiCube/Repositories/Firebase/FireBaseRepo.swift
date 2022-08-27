@@ -9,6 +9,9 @@ import Foundation
 
 // MARK: - Firebase Repository
 class FirebaseRepository {
+    static let shared = FirebaseRepository()
+    
+    // MARK: typealias
     
     // MARK: Create
     

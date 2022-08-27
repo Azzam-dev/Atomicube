@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class PlayVC: UIViewController {
 
@@ -14,16 +13,14 @@ class PlayVC: UIViewController {
     @IBOutlet weak var sliderMood: UISlider!
     @IBOutlet weak var moodEmoji: UILabel!
     
-    var allMood: [Float] = UserDefaults.standard.array(forKey: "allMood") as? [Float] ?? [Float]()
-    let lastSliderMoodPosition = UserDefaults.standard.float(forKey: "lastSliderMoodPosition")
+    var allMood = DefaultsRepository.shared.getAllMood()
+    let moodSliderPosition = DefaultsRepository.shared.getMoodSliderPosition()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
-        
-        sliderMood.value = lastSliderMoodPosition
+        sliderMood.value = moodSliderPosition
         sliderChanged(sliderMood)
         
     }
@@ -32,12 +29,9 @@ class PlayVC: UIViewController {
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         
-        UserDefaults.standard.set(sender.value, forKey: "lastSliderMoodPosition")
-        
-        
         allMood.append(sender.value)
-        UserDefaults.standard.set(allMood , forKey: "allMood")
-        
+        DefaultsRepository.shared.setMood(withValues: allMood)
+        DefaultsRepository.shared.setMoodSlider(withPosition: sender.value)
         
         //edje cases
         switch sender.value {
