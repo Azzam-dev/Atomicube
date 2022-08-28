@@ -20,8 +20,7 @@ class PlayVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        
+
         sliderMood.value = lastSliderMoodPosition
         sliderChanged(sliderMood)
         
@@ -53,7 +52,6 @@ class PlayVC: UIViewController {
         default:
             print("unexpected value for the mood slider")
         }
-        
         
         updateProgressMood(withDay: 30)
         

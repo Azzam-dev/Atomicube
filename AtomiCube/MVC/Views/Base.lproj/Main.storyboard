@@ -188,7 +188,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AI-LI-8X2">
                                                                             <rect key="frame" x="70" y="30" width="155" height="40"/>
                                                                             <subviews>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-HN-Ze6">
+                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-HN-Ze6" userLabel="Progress Mood">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="155" height="4"/>
                                                                                 </progressView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqH-kI-cml">
@@ -205,7 +205,7 @@
                                                                                 <constraint firstAttribute="width" constant="40" id="RcO-Gn-SSs"/>
                                                                                 <constraint firstAttribute="height" constant="30" id="STb-gj-z62"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -235,6 +235,12 @@
                                                         <constraint firstItem="cbj-Zm-G0l" firstAttribute="top" secondItem="YC9-e3-Bb3" secondAttribute="top" id="r6C-tl-bYm"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="emoji" destination="HMa-i3-Wfr" id="ekS-tN-2c6"/>
+                                                    <outlet property="progressMood" destination="mZ3-HN-Ze6" id="2Nz-xW-zqN"/>
+                                                    <outlet property="rate" destination="oLx-5E-1Gy" id="2vY-iP-ENT"/>
+                                                    <outlet property="type" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
