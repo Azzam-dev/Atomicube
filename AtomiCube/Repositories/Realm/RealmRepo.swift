@@ -6,9 +6,7 @@
 //
 /*
  
- Data stored in UserDefaults automatically gets loaded when the app launches.
- Storing too much data in UserDefaults, will slow down app launch.
- Don't store more than 100KB in useing UserDefaults.
+
  
  */
 
