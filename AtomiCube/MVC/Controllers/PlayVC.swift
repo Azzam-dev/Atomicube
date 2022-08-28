@@ -26,7 +26,11 @@ class PlayVC: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let journeyMoodVC = segue.destination as? JourneyMoodVC {
+            journeyMoodVC.allMood = self.allMood
+        }
+    }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         

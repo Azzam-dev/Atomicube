@@ -9,7 +9,7 @@ import UIKit
 
 class JourneyMoodVC: UIViewController {
     
-    var playVC = PlayVC()
+    var allMood = [Float]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,12 @@ class JourneyMoodVC: UIViewController {
 
 extension JourneyMoodVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playVC.allMood.count
+        return allMood.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! JourneyCell
-        cell.config(numberOfMood: Int(playVC.allMood[indexPath.row]))
+        cell.config(numberOfMood: Int(allMood[indexPath.row]))
         return cell
     }
 }
