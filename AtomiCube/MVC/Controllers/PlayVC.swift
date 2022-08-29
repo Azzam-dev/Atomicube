@@ -27,7 +27,7 @@ class PlayVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let journeyMoodVC = segue.destination as? JourneyMoodVC {
-            journeyMoodVC.allMood = allMood
+            journeyMoodVC.allMood = allMood.reversed()
         }
     }
     
