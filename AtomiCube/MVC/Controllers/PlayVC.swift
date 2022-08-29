@@ -25,7 +25,11 @@ class PlayVC: UIViewController {
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let journeyMoodVC = segue.destination as? JourneyMoodVC {
+            journeyMoodVC.allMood = allMood
+        }
+    }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         
@@ -48,7 +52,6 @@ class PlayVC: UIViewController {
         default:
             print("unexpected value for the mood slider")
         }
-        
         
         updateProgressMood(withDay: 30)
         
