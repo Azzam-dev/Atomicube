@@ -1,5 +1,5 @@
 //
-//  PlayVC.swift
+//  MoodVC.swift
 //  AtomiCube
 //
 //  Created by Azzam AL-Rashed on 20/08/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayVC: UIViewController {
+class MoodVC: UIViewController {
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
@@ -26,8 +26,8 @@ class PlayVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let journeyMoodVC = segue.destination as? JourneyMoodVC {
-            journeyMoodVC.allMood = allMood.reversed()
+        if let moodJourneyVC = segue.destination as? MoodJourneyVC {
+            moodJourneyVC.allMood = allMood.reversed()
         }
     }
     

@@ -14,7 +14,7 @@
 		21827AE628B6D20900C984BF /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21827AE528B6D20900C984BF /* ReSwift */; };
 		21827AE828B6D34000C984BF /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE728B6D34000C984BF /* CounterReducer.swift */; };
 		21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE928B6DE6100C984BF /* HabitReducer.swift */; };
-		21827AEC28B88AE300C984BF /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* PlayVC.swift */; };
+		21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* MoodVC.swift */; };
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		21DF9C2D28B91732002BDDD3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2C28B91732002BDDD3 /* Realm */; };
 		21DF9C2F28B91732002BDDD3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21DF9C2E28B91732002BDDD3 /* RealmSwift */; };
@@ -33,7 +33,7 @@
 		3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80128B5EDC500A230D3 /* HabitsVC.swift */; };
 		3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496E80328B5F39100A230D3 /* DayRatingVC.swift */; };
 		4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */; };
-		4E8F25B128B88C1C00CFE8A9 /* JourneyMoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */; };
+		4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */; };
 		4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		21827AE228B6CFFD00C984BF /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		21827AE728B6D34000C984BF /* CounterReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
-		21827AEB28B88AE300C984BF /* PlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVC.swift; sourceTree = "<group>"; };
+		21827AEB28B88AE300C984BF /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
 		21DF9C3428B9196C002BDDD3 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		3496E80128B5EDC500A230D3 /* HabitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsVC.swift; sourceTree = "<group>"; };
 		3496E80328B5F39100A230D3 /* DayRatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingVC.swift; sourceTree = "<group>"; };
 		4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
-		4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyMoodVC.swift; sourceTree = "<group>"; };
+		4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJourneyVC.swift; sourceTree = "<group>"; };
 		4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +103,10 @@
 		215365C928B5B750006D6CCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				21827AEB28B88AE300C984BF /* PlayVC.swift */,
+				21827AEB28B88AE300C984BF /* MoodVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
 				3496E80328B5F39100A230D3 /* DayRatingVC.swift */,
-				4E8F25B028B88C1C00CFE8A9 /* JourneyMoodVC.swift */,
+				4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */,
 				4E8F25B228B88D1D00CFE8A9 /* Cells */,
 			);
 			path = Controllers;
@@ -360,7 +360,7 @@
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
-				21827AEC28B88AE300C984BF /* PlayVC.swift in Sources */,
+				21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
@@ -375,7 +375,7 @@
 				21DF9C3528B9196C002BDDD3 /* DataModel.swift in Sources */,
 				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
 				21DF9C4828BA34EF002BDDD3 /* DefaultsRepo.swift in Sources */,
-				4E8F25B128B88C1C00CFE8A9 /* JourneyMoodVC.swift in Sources */,
+				4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

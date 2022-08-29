@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JourneyMoodVC: UIViewController {
+class MoodJourneyVC: UIViewController {
     
     var allMood = [Float]()
 
@@ -18,7 +18,7 @@ class JourneyMoodVC: UIViewController {
     
 }
 
-extension JourneyMoodVC: UITableViewDataSource, UITableViewDelegate {
+extension MoodJourneyVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allMood.count
     }
