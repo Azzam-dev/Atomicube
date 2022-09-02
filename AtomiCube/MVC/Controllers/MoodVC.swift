@@ -21,7 +21,6 @@ class MoodVC: UIViewController {
         
     }
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let moodJourneyVC = segue.destination as? MoodJourneyVC {
             moodJourneyVC.allMood = allMood.reversed()
