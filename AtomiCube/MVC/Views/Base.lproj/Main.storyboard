@@ -95,10 +95,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bxS-QH-bex">
                                         <rect key="frame" x="38" y="65" width="274" height="31"/>
                                         <connections>
-                                            <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pOA-Au-BAr"/>
+                                            <action selector="sliderEventDidChange:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="M7S-Y7-zXB"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -279,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKK-rf-Th6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-103.2" y="759.67016491754134"/>
+            <point key="canvasLocation" x="-102" y="818"/>
         </scene>
         <!--HabitsVC-->
         <scene sceneID="VTq-Uw-Gm5">

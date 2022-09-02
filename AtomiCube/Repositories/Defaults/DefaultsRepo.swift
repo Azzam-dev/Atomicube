@@ -21,33 +21,9 @@ import Foundation
 class DefaultsRepository {
     static let shared = DefaultsRepository()
     
-    
-    // TODO: Move Mood Data to Realm Repository
-    
-    // MARK: typealias
-    typealias MoodValues = [Float]
-    
-    
     // MARK: Create
-    func setMood(withValues values: MoodValues) {
-        UserDefaults.standard.set(values, forKey: "allMood")
-    }
-    
-    func setMoodSlider(withPosition position: Float) {
-        UserDefaults.standard.set(position, forKey: "moodSliderPosition")
-    }
-    
-    
-    
+
     // MARK: Read
-    func getAllMood() -> MoodValues {
-        return UserDefaults.standard.getFloatArray(forKey: "allMood")
-    }
-    
-    func getMoodSliderPosition() -> Float {
-        return UserDefaults.standard.float(forKey: "moodSliderPosition")
-    }
-    
     
     // MARK: Update
     

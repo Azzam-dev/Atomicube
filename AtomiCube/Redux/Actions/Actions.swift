@@ -21,7 +21,7 @@ struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 
 // MARK: actions for Mood
-struct MoodSliderActionDidMove: Action { let moodValue: Float}
+struct UpdateMoodAction: Action { let newMoodValue: Float }
 
 
 // MARK: actions for Habits

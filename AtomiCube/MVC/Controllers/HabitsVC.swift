@@ -8,32 +8,14 @@
 import UIKit
 import ReSwift
 
-class HabitsVC: UIViewController, StoreSubscriber {
+class HabitsVC: UIViewController {
     
     @IBOutlet var habitsProgress: [UIProgressView]!
     @IBOutlet var habitsPercentage: [UILabel]!
     
-    override func viewWillAppear(_ animated: Bool) {
-        mainStore.subscribe(self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        mainStore.unsubscribe(self)
-    }
-    
-    func newState(state: AppState) {
-        print("list my Habits:", state.habits)
-        for (i, habit) in state.habits.enumerated()  {
-            habitsProgress[i].progress = habit ? 1.0 : 0.0
-            habitsPercentage[i].text = habit ? "100%" : "0%"
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -63,3 +45,22 @@ class HabitsVC: UIViewController, StoreSubscriber {
     
 }
 
+extension HabitsVC: StoreSubscriber {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(self)
+    }
+    
+    func newState(state: AppState) {
+        print("list my Habits:", state.habits)
+        for (i, habit) in state.habits.enumerated()  {
+            habitsProgress[i].progress = habit ? 1.0 : 0.0
+            habitsPercentage[i].text = habit ? "100%" : "0%"
+        }
+    }
+    
+}
