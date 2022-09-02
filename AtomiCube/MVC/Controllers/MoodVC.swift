@@ -1,5 +1,5 @@
 //
-//  PlayVC.swift
+//  MoodVC.swift
 //  AtomiCube
 //
 //  Created by Azzam AL-Rashed on 20/08/2022.
@@ -8,7 +8,7 @@
 import UIKit
 import ReSwift
 
-class PlayVC: UIViewController {
+class MoodVC: UIViewController {
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
@@ -21,6 +21,13 @@ class PlayVC: UIViewController {
         
     }
     
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let moodJourneyVC = segue.destination as? MoodJourneyVC {
+            moodJourneyVC.allMood = allMood.reversed()
+        }
+    }
+
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
         let todaysMoodValue = sender.value
         moodEmoji.text = getMoodEmoji(with: todaysMoodValue)
@@ -30,7 +37,6 @@ class PlayVC: UIViewController {
             }
         }
     }
-    
     
     fileprivate func getMoodEmoji(with moodValue: Float?) -> String {
         guard let moodValue = moodValue else {

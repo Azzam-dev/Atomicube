@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PlayVC-->
+        <!--MoodVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PlayVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoodVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,39 +142,39 @@
             </objects>
             <point key="canvasLocation" x="-101" y="80"/>
         </scene>
-        <!--Journey MoodVC-->
+        <!--Mood JourneyVC-->
         <scene sceneID="jiS-bH-Zgi">
             <objects>
-                <viewController id="uko-y8-p1c" customClass="JourneyMoodVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uko-y8-p1c" customClass="MoodJourneyVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HnP-Bo-Jt0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERi-bG-llS" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
-                                <rect key="frame" x="40" y="144" width="310" height="651"/>
+                                <rect key="frame" x="20" y="144" width="350" height="651"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Journey With Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-7b-5AM">
-                                        <rect key="frame" x="50" y="8" width="210" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Journey With Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFi-7b-5AM">
+                                        <rect key="frame" x="80" y="8" width="190" height="21"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l8F-hj-P4c">
-                                        <rect key="frame" x="10" y="30" width="290" height="621"/>
+                                        <rect key="frame" x="10" y="30" width="330" height="621"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="70" id="yGl-fg-9OZ" customClass="JourneyCell" customModule="AtomiCube" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.666666030883789" width="290" height="70"/>
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="330" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yGl-fg-9OZ" id="YC9-e3-Bb3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbj-Zm-G0l">
-                                                            <rect key="frame" x="0.0" y="0.0" width="290" height="70"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8PT-cg-TJj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="70"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="70"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMa-i3-Wfr">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
@@ -186,13 +186,13 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1AI-LI-8X2">
-                                                                            <rect key="frame" x="70" y="30" width="170" height="40"/>
+                                                                            <rect key="frame" x="70" y="30" width="210" height="40"/>
                                                                             <subviews>
-                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-HN-Ze6">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="4"/>
+                                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-HN-Ze6" userLabel="Progress Mood">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="210" height="4"/>
                                                                                 </progressView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqH-kI-cml">
-                                                                                    <rect key="frame" x="0.0" y="-3" width="170" height="43"/>
+                                                                                    <rect key="frame" x="0.0" y="-3" width="210" height="43"/>
                                                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -200,12 +200,12 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLx-5E-1Gy">
-                                                                            <rect key="frame" x="250" y="40" width="40" height="30"/>
+                                                                            <rect key="frame" x="290" y="40" width="40" height="30"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="40" id="RcO-Gn-SSs"/>
                                                                                 <constraint firstAttribute="height" constant="30" id="STb-gj-z62"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="15"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -235,6 +235,12 @@
                                                         <constraint firstItem="cbj-Zm-G0l" firstAttribute="top" secondItem="YC9-e3-Bb3" secondAttribute="top" id="r6C-tl-bYm"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="emoji" destination="HMa-i3-Wfr" id="ekS-tN-2c6"/>
+                                                    <outlet property="progressMood" destination="mZ3-HN-Ze6" id="2Nz-xW-zqN"/>
+                                                    <outlet property="rate" destination="oLx-5E-1Gy" id="2vY-iP-ENT"/>
+                                                    <outlet property="type" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
@@ -246,13 +252,12 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="rFi-7b-5AM" firstAttribute="leading" secondItem="ERi-bG-llS" secondAttribute="leading" constant="50" id="1V0-81-w3e"/>
-                                    <constraint firstItem="l8F-hj-P4c" firstAttribute="leading" secondItem="ERi-bG-llS" secondAttribute="leading" constant="10" id="1ae-lS-BFH"/>
+                                    <constraint firstItem="rFi-7b-5AM" firstAttribute="centerX" secondItem="ERi-bG-llS" secondAttribute="centerX" id="3NY-0H-aQP"/>
                                     <constraint firstItem="l8F-hj-P4c" firstAttribute="top" secondItem="rFi-7b-5AM" secondAttribute="bottom" constant="1" id="5py-pp-56U"/>
+                                    <constraint firstItem="l8F-hj-P4c" firstAttribute="centerX" secondItem="ERi-bG-llS" secondAttribute="centerX" id="5tB-5e-P5q"/>
                                     <constraint firstAttribute="bottom" secondItem="l8F-hj-P4c" secondAttribute="bottom" id="CJ3-1O-V49"/>
                                     <constraint firstItem="rFi-7b-5AM" firstAttribute="top" secondItem="ERi-bG-llS" secondAttribute="top" constant="8" id="Ifv-Ld-2ee"/>
                                     <constraint firstAttribute="trailing" secondItem="l8F-hj-P4c" secondAttribute="trailing" constant="10" id="MRV-yt-lxk"/>
-                                    <constraint firstAttribute="trailing" secondItem="rFi-7b-5AM" secondAttribute="trailing" constant="50" id="UsX-6R-svR"/>
                                     <constraint firstItem="l8F-hj-P4c" firstAttribute="top" secondItem="ERi-bG-llS" secondAttribute="top" constant="30" id="dtE-y7-Fos"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -264,10 +269,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dsu-bQ-7pb"/>
                         <constraints>
-                            <constraint firstItem="ERi-bG-llS" firstAttribute="leading" secondItem="dsu-bQ-7pb" secondAttribute="leading" constant="40" id="1zH-ve-REE"/>
-                            <constraint firstItem="dsu-bQ-7pb" firstAttribute="trailing" secondItem="ERi-bG-llS" secondAttribute="trailing" constant="40" id="8dT-8n-qDe"/>
+                            <constraint firstItem="dsu-bQ-7pb" firstAttribute="trailing" secondItem="ERi-bG-llS" secondAttribute="trailing" constant="20" id="8dT-8n-qDe"/>
                             <constraint firstItem="ERi-bG-llS" firstAttribute="top" secondItem="dsu-bQ-7pb" secondAttribute="top" constant="100" id="GWp-EL-Job"/>
                             <constraint firstAttribute="bottom" secondItem="ERi-bG-llS" secondAttribute="bottom" constant="-5" id="o5I-SW-Y0t"/>
+                            <constraint firstItem="ERi-bG-llS" firstAttribute="centerX" secondItem="HnP-Bo-Jt0" secondAttribute="centerX" id="qON-yT-Nc8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fix-wW-rJU"/>
