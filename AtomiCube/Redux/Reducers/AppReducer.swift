@@ -26,10 +26,15 @@ func appReducer(action: Action, state: AppState?) -> AppState {
         state = counterReducer(action: action, state: state)
     case _ as CounterActionDecrease:
         state = counterReducer(action: action, state: state)
+        
+    case _ as UpdateMoodAction:
+        state = moodReducer(action: action, state: state)
+        
     case _ as HabitActionComplete:
         state = habitReducer(action: action, state: state)
     case _ as HabitActionUncomplete:
         state = habitReducer(action: action, state: state)
+        
     case _ as DayRatingActionAdd:
         state = dayRatingReducer(action: action, state: state)
     default:
