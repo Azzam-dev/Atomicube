@@ -23,7 +23,7 @@ class MoodVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let moodJourneyVC = segue.destination as? MoodJourneyVC {
-            moodJourneyVC.allMood = allMood.reversed()
+            moodJourneyVC.allMood = mood.values.reversed()
         }
     }
 
@@ -72,7 +72,7 @@ class MoodVC: UIViewController {
 }
 
 
-extension PlayVC: StoreSubscriber {
+extension MoodVC: StoreSubscriber {
     
     override func viewWillAppear(_ animated: Bool) {
         mainStore.subscribe(self)
