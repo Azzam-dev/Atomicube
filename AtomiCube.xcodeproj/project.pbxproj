@@ -10,6 +10,7 @@
 		214D5B4628C28849007E1545 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4528C28849007E1545 /* ReSwift */; };
 		214D5B4928C2887F007E1545 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4828C2887F007E1545 /* Realm */; };
 		214D5B4B28C2887F007E1545 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4A28C2887F007E1545 /* RealmSwift */; };
+		214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 214D5B4E28C34464007E1545 /* monogamma-regular.otf */; };
 		2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173CADE28C2237300CE6E61 /* MoodReducer.swift */; };
 		21827ADD28B6CF8D00C984BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADC28B6CF8D00C984BF /* Store.swift */; };
 		21827ADF28B6CFD200C984BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADE28B6CFD200C984BF /* AppState.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		214D5B4E28C34464007E1545 /* monogamma-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monogamma-regular.otf"; sourceTree = "<group>"; };
 		2173CADE28C2237300CE6E61 /* MoodReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReducer.swift; sourceTree = "<group>"; };
 		21827ADC28B6CF8D00C984BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		21827ADE28B6CFD200C984BF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -83,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214D5B4C28C343A3007E1545 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				214D5B4D28C343C2007E1545 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		214D5B4D28C343C2007E1545 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				214D5B4E28C34464007E1545 /* monogamma-regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		215365C628B5B723006D6CCF /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +274,7 @@
 				215365CD28B5C75C006D6CCF /* Redux */,
 				21DF9C3D28BA153B002BDDD3 /* Repositories */,
 				4E8F25AD28B3E41400CFE8A9 /* Extensions */,
+				214D5B4C28C343A3007E1545 /* Resources */,
 				21EB660128B1764D0045C3BB /* Assets.xcassets */,
 			);
 			path = AtomiCube;
@@ -347,6 +366,7 @@
 				21EB660528B1764D0045C3BB /* LaunchScreen.storyboard in Resources */,
 				21EB660228B1764D0045C3BB /* Assets.xcassets in Resources */,
 				21EB660028B1764C0045C3BB /* Main.storyboard in Resources */,
+				214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
