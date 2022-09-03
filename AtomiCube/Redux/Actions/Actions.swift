@@ -22,7 +22,7 @@ struct CounterActionDecrease: Action {}
 
 // MARK: actions for Mood
 struct UpdateMoodAction: Action { let newMoodValue: Float }
-
+struct DeleteMoodAction: Action { }
 
 // MARK: actions for Habits
 enum Habit: Int {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -19,7 +19,7 @@
         <!--MoodVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MoodVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoodVC" id="BYZ-38-t0r" customClass="MoodVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
         <!--Mood JourneyVC-->
         <scene sceneID="jiS-bH-Zgi">
             <objects>
-                <viewController id="uko-y8-p1c" customClass="MoodJourneyVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoodJourneyVC" id="uko-y8-p1c" customClass="MoodJourneyVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HnP-Bo-Jt0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,7 +294,7 @@
         <!--HabitsVC-->
         <scene sceneID="VTq-Uw-Gm5">
             <objects>
-                <viewController id="DwW-J2-mif" customClass="HabitsVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HabitsVC" id="DwW-J2-mif" customClass="HabitsVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhE-3c-YfK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +509,7 @@
         <!--Day RatingVC-->
         <scene sceneID="2qD-8e-Lbb">
             <objects>
-                <viewController id="nrf-b4-2SW" customClass="DayRatingVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DayRatingVC" id="nrf-b4-2SW" customClass="DayRatingVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QKZ-xv-TZt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

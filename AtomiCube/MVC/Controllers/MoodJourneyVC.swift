@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoodJourneyVC: UIViewController {
+class MoodJourneyVC: UIViewController, Storyboarded {
     
     var allMood = [Float]()
 

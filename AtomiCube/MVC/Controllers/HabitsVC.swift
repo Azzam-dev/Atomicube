@@ -8,7 +8,7 @@
 import UIKit
 import ReSwift
 
-class HabitsVC: UIViewController {
+class HabitsVC: UIViewController, Storyboarded {
     
     @IBOutlet var habitsProgress: [UIProgressView]!
     @IBOutlet var habitsPercentage: [UILabel]!

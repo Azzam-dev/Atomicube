@@ -8,7 +8,7 @@
 import UIKit
 import ReSwift
 
-class MoodVC: UIViewController {
+class MoodVC: UIViewController, Storyboarded {
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
@@ -30,6 +30,7 @@ class MoodVC: UIViewController {
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
         let todaysMoodValue = sender.value
         moodEmoji.text = getMoodEmoji(with: todaysMoodValue)
+        
         if let eventPhase = event.allTouches?.first?.phase {
             if eventPhase == .ended {
                 mainStore.dispatch(UpdateMoodAction(newMoodValue: todaysMoodValue))
