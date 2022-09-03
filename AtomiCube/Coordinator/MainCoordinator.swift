@@ -18,6 +18,13 @@ class MainCoordinator: Coordinator {
     //MARK: Initial View Controller
     func start() {
         let vc = MoodVC.instantiate()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func viewMoodJourney(with mood: Mood) {
+        let vc = MoodJourneyVC.instantiate()
+        vc.mood = mood
+        navigationController.present(vc, animated: true)
     }
 }
