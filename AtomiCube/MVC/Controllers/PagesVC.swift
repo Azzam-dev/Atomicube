@@ -8,11 +8,11 @@
 import UIKit
 
 class PagesVC: UIViewController, Storyboarded {
-
     
     var pagesContainer = UIView(frame: .zero)
     @IBOutlet weak var pageControl: UIPageControl!
     var pages = [UIViewController]()
+    var transitionSpeed = 0.25
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class PagesVC: UIViewController, Storyboarded {
     }
 
     @IBAction func didChangePage(_ sender: UIPageControl) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: transitionSpeed) {
             self.pagesContainer.frame.origin.x = CGFloat(-sender.currentPage) * self.view.frame.width
         }
     }
