@@ -8,31 +8,10 @@
 import UIKit
 import ReSwift
 
-class DayRatingVC: UIViewController, StoreSubscriber {
-
+class DayRatingVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
+    
     @IBOutlet weak var averageRating: UILabel!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        mainStore.subscribe(self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        mainStore.unsubscribe(self)
-    }
-    
-    func newState(state: AppState) {
-        var totalRatingsValue = 0.0
-        let dayRatings = state.dayRatings
-        for rating in dayRatings {
-            totalRatingsValue += Double(rating)
-        }
-        
-        if dayRatings.count > 0 {
-            
-            let average = totalRatingsValue / Double(dayRatings.count)
-            averageRating.text = String(format: "%.1f", average)
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,12 +43,31 @@ class DayRatingVC: UIViewController, StoreSubscriber {
         mainStore.dispatch(DayRatingActionAdd(rating: 5))
     }
     
-    
-    
-    
+}
 
+
+extension DayRatingVC: StoreSubscriber {
     
+    override func viewWillAppear(_ animated: Bool) {
+        mainStore.subscribe(self)
+    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(self)
+    }
     
+    func newState(state: AppState) {
+        var totalRatingsValue = 0.0
+        let dayRatings = state.dayRatings
+        for rating in dayRatings {
+            totalRatingsValue += Double(rating)
+        }
+        
+        if dayRatings.count > 0 {
+            
+            let average = totalRatingsValue / Double(dayRatings.count)
+            averageRating.text = String(format: "%.1f", average)
+        }
+    }
     
 }

@@ -14,6 +14,8 @@ func moodReducer(action: Action, state: AppState?) -> AppState {
     case let action as UpdateMoodAction:
         print("UpdateMoodAction:\(action.newMoodValue)")
         RealmRepository.shared.addMoodValue(with: action.newMoodValue)
+    case let action as DeleteMoodAction:
+        print("DeleteMoodAction")
     default:
         break
     }

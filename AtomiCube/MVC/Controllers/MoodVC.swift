@@ -8,7 +8,8 @@
 import UIKit
 import ReSwift
 
-class MoodVC: UIViewController {
+class MoodVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
@@ -21,15 +22,15 @@ class MoodVC: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let moodJourneyVC = segue.destination as? MoodJourneyVC {
-            moodJourneyVC.allMood = mood.values.reversed()
-        }
+    
+    @IBAction func didPressMoreButton(_ sender: UIButton) {
+        coordinator?.viewMoodJourney(with: mood)
     }
-
+    
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
         let todaysMoodValue = sender.value
         moodEmoji.text = getMoodEmoji(with: todaysMoodValue)
+        
         if let eventPhase = event.allTouches?.first?.phase {
             if eventPhase == .ended {
                 mainStore.dispatch(UpdateMoodAction(newMoodValue: todaysMoodValue))

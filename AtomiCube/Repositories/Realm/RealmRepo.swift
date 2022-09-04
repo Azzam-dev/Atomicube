@@ -59,10 +59,8 @@ class RealmRepository {
     // MARK: Read
     func getMood() -> Mood {
         if let mood = localRealm.object(ofType: Mood.self, forPrimaryKey: "Mood") {
-            print("get mood found a Mood object in realm", mood)
             return mood
         } else {
-            print("get mood wants to create New Mood")
             return createNewMood()
         }
         
