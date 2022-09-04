@@ -7,13 +7,15 @@
 
 import UIKit
 import ReSwift
+import Lottie
 
 class MoodVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
-    @IBOutlet weak var moodEmoji: UILabel!
+    @IBOutlet weak var moodEmojiView: AnimationView!
+    
     
     var mood: Mood = RealmRepository.shared.getMood()
     
@@ -29,8 +31,7 @@ class MoodVC: UIViewController, Storyboarded {
     
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
         let todaysMoodValue = sender.value
-        moodEmoji.text = getMoodEmoji(with: todaysMoodValue)
-        
+        moodEmojiView = getMoodEmoji(with: todaysMoodValue)
         if let eventPhase = event.allTouches?.first?.phase {
             if eventPhase == .ended {
                 mainStore.dispatch(UpdateMoodAction(newMoodValue: todaysMoodValue))
@@ -38,26 +39,33 @@ class MoodVC: UIViewController, Storyboarded {
         }
     }
     
-    fileprivate func getMoodEmoji(with moodValue: Float?) -> String {
+    func lottileAnimation(type: String) -> AnimationView {
+        moodEmojiView.animation = Animation.named(type)
+        moodEmojiView.contentMode = .scaleAspectFit
+        moodEmojiView.play()
+        return moodEmojiView
+    }
+    
+    fileprivate func getMoodEmoji(with moodValue: Float?) -> AnimationView {
         guard let moodValue = moodValue else {
             print("getMoodEmoji() received nil value")
-            return "😐"
+            return lottileAnimation(type: "poker")
         }
 
         switch moodValue.rounded() {
         case 0...25:
-             return "😩"
+             return lottileAnimation(type: "sad")
         case 26...45:
-            return "😒"
+            return lottileAnimation(type: "sulked")
         case 46...55:
-            return "😐"
+            return lottileAnimation(type: "poker")
         case 56...75:
-            return "🙂"
+            return lottileAnimation(type: "smiley")
         case 76...100:
-            return "😊"
+            return lottileAnimation(type: "lovelyKiss")
         default:
             print("getMoodEmoji() received out of range value")
-            return "😐"
+            return lottileAnimation(type: "poker")
         }
     }
     
@@ -85,7 +93,7 @@ extension MoodVC: StoreSubscriber {
     
     func newState(state: AppState) {
         sliderMood.value = mood.values.last ?? 50.0
-        moodEmoji.text = getMoodEmoji(with: mood.values.last)
+        moodEmojiView = getMoodEmoji(with: mood.values.last)
         progressMood.progress = getAverageMood(from: mood)
     }
 }

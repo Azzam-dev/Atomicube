@@ -41,6 +41,12 @@
 		4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */; };
 		4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */; };
 		4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */; };
+		4ED4BF2D28C38EB7003C0A6D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED4BF2C28C38EB7003C0A6D /* Lottie */; };
+		4ED4BF3728C3F40A003C0A6D /* sad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3228C3F40A003C0A6D /* sad.json */; };
+		4ED4BF3828C3F40B003C0A6D /* smiley.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3328C3F40A003C0A6D /* smiley.json */; };
+		4ED4BF3928C3F40B003C0A6D /* sulked.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3428C3F40A003C0A6D /* sulked.json */; };
+		4ED4BF3A28C3F40B003C0A6D /* poker.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3528C3F40A003C0A6D /* poker.json */; };
+		4ED4BF3B28C3F40B003C0A6D /* lovelyKiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +83,11 @@
 		4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 		4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodJourneyVC.swift; sourceTree = "<group>"; };
 		4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCell.swift; sourceTree = "<group>"; };
+		4ED4BF3228C3F40A003C0A6D /* sad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sad.json; sourceTree = "<group>"; };
+		4ED4BF3328C3F40A003C0A6D /* smiley.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smiley.json; sourceTree = "<group>"; };
+		4ED4BF3428C3F40A003C0A6D /* sulked.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sulked.json; sourceTree = "<group>"; };
+		4ED4BF3528C3F40A003C0A6D /* poker.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poker.json; sourceTree = "<group>"; };
+		4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lovelyKiss.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +98,7 @@
 				214D5B4B28C2887F007E1545 /* RealmSwift in Frameworks */,
 				214D5B4928C2887F007E1545 /* Realm in Frameworks */,
 				214D5B4628C28849007E1545 /* ReSwift in Frameworks */,
+				4ED4BF2D28C38EB7003C0A6D /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +108,7 @@
 		214D5B4C28C343A3007E1545 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4ED4BF3128C3F3D3003C0A6D /* lottieAnimation */,
 				214D5B4D28C343C2007E1545 /* Fonts */,
 			);
 			path = Resources;
@@ -316,6 +329,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4ED4BF3128C3F3D3003C0A6D /* lottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4ED4BF3528C3F40A003C0A6D /* poker.json */,
+				4ED4BF3428C3F40A003C0A6D /* sulked.json */,
+				4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */,
+				4ED4BF3328C3F40A003C0A6D /* smiley.json */,
+				4ED4BF3228C3F40A003C0A6D /* sad.json */,
+			);
+			path = lottieAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,6 +361,7 @@
 				214D5B4528C28849007E1545 /* ReSwift */,
 				214D5B4828C2887F007E1545 /* Realm */,
 				214D5B4A28C2887F007E1545 /* RealmSwift */,
+				4ED4BF2C28C38EB7003C0A6D /* Lottie */,
 			);
 			productName = AtomiCube;
 			productReference = 21EB65F528B1764C0045C3BB /* AtomiCube.app */;
@@ -368,6 +394,7 @@
 			packageReferences = (
 				214D5B4428C28849007E1545 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 21EB65F628B1764C0045C3BB /* Products */;
 			projectDirPath = "";
@@ -384,8 +411,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EB660528B1764D0045C3BB /* LaunchScreen.storyboard in Resources */,
+				4ED4BF3A28C3F40B003C0A6D /* poker.json in Resources */,
+				4ED4BF3B28C3F40B003C0A6D /* lovelyKiss.json in Resources */,
 				21EB660228B1764D0045C3BB /* Assets.xcassets in Resources */,
+				4ED4BF3828C3F40B003C0A6D /* smiley.json in Resources */,
+				4ED4BF3728C3F40A003C0A6D /* sad.json in Resources */,
 				21EB660028B1764C0045C3BB /* Main.storyboard in Resources */,
+				4ED4BF3928C3F40B003C0A6D /* sulked.json in Resources */,
 				214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +695,14 @@
 				kind = branch;
 			};
 		};
+		4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -680,6 +720,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		4ED4BF2C28C38EB7003C0A6D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
