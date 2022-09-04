@@ -9,7 +9,8 @@ import UIKit
 import ReSwift
 
 class DayRatingVC: UIViewController, Storyboarded {
-
+    var coordinator: MainCoordinator?
+    
     @IBOutlet weak var averageRating: UILabel!
     
     override func viewDidLoad() {

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         //MARK: Coordinator Setup
         let navController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navController)
+        coordinator = MainCoordinator(navController)
         coordinator?.start()
         
         window = UIWindow(windowScene: windowScene)

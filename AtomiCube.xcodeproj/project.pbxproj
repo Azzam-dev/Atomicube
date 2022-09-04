@@ -30,6 +30,7 @@
 		21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4328BA34D2002BDDD3 /* FireBaseRepo.swift */; };
 		21DF9C4628BA34E0002BDDD3 /* RealmRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4528BA34E0002BDDD3 /* RealmRepo.swift */; };
 		21DF9C4828BA34EF002BDDD3 /* DefaultsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C4728BA34EF002BDDD3 /* DefaultsRepo.swift */; };
+		21E4863128C50BA700D2435E /* PagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E4863028C50BA700D2435E /* PagesVC.swift */; };
 		21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65F828B1764C0045C3BB /* AppDelegate.swift */; };
 		21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */; };
 		21EB660028B1764C0045C3BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21EB65FE28B1764C0045C3BB /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		21DF9C4328BA34D2002BDDD3 /* FireBaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseRepo.swift; sourceTree = "<group>"; };
 		21DF9C4528BA34E0002BDDD3 /* RealmRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepo.swift; sourceTree = "<group>"; };
 		21DF9C4728BA34EF002BDDD3 /* DefaultsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRepo.swift; sourceTree = "<group>"; };
+		21E4863028C50BA700D2435E /* PagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesVC.swift; sourceTree = "<group>"; };
 		21EB65F528B1764C0045C3BB /* AtomiCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomiCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EB65F828B1764C0045C3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21EB65FA28B1764C0045C3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		215365C928B5B750006D6CCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21E4863028C50BA700D2435E /* PagesVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
 				3496E80328B5F39100A230D3 /* DayRatingVC.swift */,
@@ -397,6 +400,7 @@
 				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
 				21DF9C3C28B91BE9002BDDD3 /* DayRatingViewModel.swift in Sources */,
 				214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */,
+				21E4863128C50BA700D2435E /* PagesVC.swift in Sources */,
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,

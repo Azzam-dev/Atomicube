@@ -291,6 +291,57 @@
             </objects>
             <point key="canvasLocation" x="-102" y="818"/>
         </scene>
+        <!--PagesVC-->
+        <scene sceneID="TjJ-jH-nZf">
+            <objects>
+                <viewController storyboardIdentifier="PagesVC" id="EJ3-q0-eCf" customClass="PagesVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBJ-mj-Cv7">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liP-qg-02Y" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
+                                <rect key="frame" x="95" y="750" width="200" height="50"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2ZI-eS-J7I">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                        <connections>
+                                            <action selector="didChangePage:" destination="EJ3-q0-eCf" eventType="valueChanged" id="90d-S1-HH9"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="2ZI-eS-J7I" firstAttribute="centerX" secondItem="liP-qg-02Y" secondAttribute="centerX" id="1Jn-r8-D9v"/>
+                                    <constraint firstItem="2ZI-eS-J7I" firstAttribute="centerY" secondItem="liP-qg-02Y" secondAttribute="centerY" id="3r5-Jo-ncG"/>
+                                    <constraint firstAttribute="width" constant="200" id="6yA-UD-rKY"/>
+                                    <constraint firstAttribute="trailing" secondItem="2ZI-eS-J7I" secondAttribute="trailing" id="CdG-Wl-JcG"/>
+                                    <constraint firstItem="2ZI-eS-J7I" firstAttribute="top" secondItem="liP-qg-02Y" secondAttribute="top" id="SCw-P7-Zah"/>
+                                    <constraint firstItem="2ZI-eS-J7I" firstAttribute="leading" secondItem="liP-qg-02Y" secondAttribute="leading" id="SgI-Kr-yIp"/>
+                                    <constraint firstAttribute="height" constant="50" id="aLC-rb-id8"/>
+                                    <constraint firstAttribute="bottom" secondItem="2ZI-eS-J7I" secondAttribute="bottom" id="mOd-vo-ZoA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CCA-Pd-Fvu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="liP-qg-02Y" firstAttribute="centerX" secondItem="eBJ-mj-Cv7" secondAttribute="centerX" id="5xu-rO-kLo"/>
+                            <constraint firstItem="CCA-Pd-Fvu" firstAttribute="bottom" secondItem="liP-qg-02Y" secondAttribute="bottom" constant="10" id="62o-KH-bRA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="2ZI-eS-J7I" id="jHU-Qb-gV0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2e2-CF-bbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681.53846153846155" y="-615.63981042654029"/>
+        </scene>
         <!--HabitsVC-->
         <scene sceneID="VTq-Uw-Gm5">
             <objects>
@@ -869,6 +920,9 @@
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
