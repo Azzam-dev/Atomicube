@@ -9,7 +9,8 @@ import UIKit
 import ReSwift
 import Lottie
 
-class MoodVC: UIViewController {
+class MoodVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
 
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
@@ -23,12 +24,11 @@ class MoodVC: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let moodJourneyVC = segue.destination as? MoodJourneyVC {
-            moodJourneyVC.allMood = mood.values.reversed()
-        }
+    
+    @IBAction func didPressMoreButton(_ sender: UIButton) {
+        coordinator?.viewMoodJourney(with: mood)
     }
-
+    
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
         let todaysMoodValue = sender.value
         moodEmojiView = getMoodEmoji(with: todaysMoodValue)

@@ -7,25 +7,30 @@
 
 import UIKit
 
-class MoodJourneyVC: UIViewController {
+class MoodJourneyVC: UIViewController, Storyboarded {
     
-    var allMood = [Float]()
-
+    var mood: Mood?
+    var moodValues = [Float]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let mood = mood {
+            moodValues = mood.values.reversed()
+        }
+        
     }
     
 }
 
 extension MoodJourneyVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allMood.count
+        return moodValues.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! JourneyCell
-        cell.config(numberOfMood: Int(allMood[indexPath.row]))
+        cell.config(numberOfMood: Int(moodValues[indexPath.row]))
         return cell
     }
 }

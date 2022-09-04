@@ -29,6 +29,8 @@ func appReducer(action: Action, state: AppState?) -> AppState {
         
     case _ as UpdateMoodAction:
         state = moodReducer(action: action, state: state)
+    case _ as DeleteMoodAction:
+        state = moodReducer(action: action, state: state)
         
     case _ as HabitActionComplete:
         state = habitReducer(action: action, state: state)
