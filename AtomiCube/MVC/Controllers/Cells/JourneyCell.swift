@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class JourneyCell: UITableViewCell {
     
@@ -25,7 +26,7 @@ class JourneyCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func config(numberOfMood: Int) {
         switch numberOfMood {
         case 0...25:

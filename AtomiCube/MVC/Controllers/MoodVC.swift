@@ -15,6 +15,7 @@ class MoodVC: UIViewController, Storyboarded {
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
     @IBOutlet weak var moodEmojiView: AnimationView!
+    @IBOutlet weak var typeMood: UILabel!
     
     
     var mood: Mood = RealmRepository.shared.getMood()
@@ -54,14 +55,24 @@ class MoodVC: UIViewController, Storyboarded {
 
         switch moodValue.rounded() {
         case 0...25:
+            typeMood.text = "Sad.."
+            typeMood.textColor = #colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1)
              return lottileAnimation(type: "sad")
         case 26...45:
+            typeMood.text = "Boring!"
+            typeMood.textColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
             return lottileAnimation(type: "sulked")
         case 46...55:
+            typeMood.text = "Nothing"
+            typeMood.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             return lottileAnimation(type: "poker")
         case 56...75:
+            typeMood.text = "Joyful"
+            typeMood.textColor = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
             return lottileAnimation(type: "smiley")
         case 76...100:
+            typeMood.text = "Happy!"
+            typeMood.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
             return lottileAnimation(type: "lovelyKiss")
         default:
             print("getMoodEmoji() received out of range value")
