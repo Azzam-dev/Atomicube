@@ -247,10 +247,10 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="emoji" destination="HMa-i3-Wfr" id="ekS-tN-2c6"/>
-                                                    <outlet property="progressMood" destination="mZ3-HN-Ze6" id="2Nz-xW-zqN"/>
-                                                    <outlet property="rate" destination="oLx-5E-1Gy" id="2vY-iP-ENT"/>
-                                                    <outlet property="type" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
+                                                    <outlet property="emojiLabel" destination="HMa-i3-Wfr" id="ekS-tN-2c6"/>
+                                                    <outlet property="moodProgress" destination="mZ3-HN-Ze6" id="2Nz-xW-zqN"/>
+                                                    <outlet property="rateLabel" destination="oLx-5E-1Gy" id="2vY-iP-ENT"/>
+                                                    <outlet property="typeLabel" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
