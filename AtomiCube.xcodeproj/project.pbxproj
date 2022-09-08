@@ -24,6 +24,7 @@
 		21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* MoodVC.swift */; };
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
+		2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */; };
 		21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3428B9196C002BDDD3 /* Mood.swift */; };
 		21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */; };
 		21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */; };
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */,
 				214D5B4B28C2887F007E1545 /* RealmSwift in Frameworks */,
 				214D5B4928C2887F007E1545 /* Realm in Frameworks */,
 				214D5B4628C28849007E1545 /* ReSwift in Frameworks */,
@@ -373,6 +375,7 @@
 				214D5B4828C2887F007E1545 /* Realm */,
 				214D5B4A28C2887F007E1545 /* RealmSwift */,
 				4ED4BF2C28C38EB7003C0A6D /* Lottie */,
+				2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */,
 			);
 			productName = AtomiCube;
 			productReference = 21EB65F528B1764C0045C3BB /* AtomiCube.app */;
@@ -406,6 +409,7 @@
 				214D5B4428C28849007E1545 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				2195857428C9A56700FB2322 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 21EB65F628B1764C0045C3BB /* Products */;
 			projectDirPath = "";
@@ -709,6 +713,14 @@
 				kind = branch;
 			};
 		};
+		2195857428C9A56700FB2322 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -734,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2195857428C9A56700FB2322 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		4ED4BF2C28C38EB7003C0A6D /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
