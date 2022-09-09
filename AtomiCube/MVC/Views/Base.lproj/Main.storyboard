@@ -925,10 +925,10 @@
             </objects>
             <point key="canvasLocation" x="1473.913043478261" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--TasksVC-->
         <scene sceneID="r99-Rz-0cW">
             <objects>
-                <viewController id="xnl-Nf-CqP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TasksVC" id="xnl-Nf-CqP" customClass="TasksVC" customModule="AtomiCube" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jb-Jc-eK3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -948,12 +948,18 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rug-Wf-UuD">
                                                 <rect key="frame" x="0.0" y="30" width="330" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="didPressAddTask:forEvent:" destination="xnl-Nf-CqP" eventType="primaryActionTriggered" id="wdo-UM-6HZ"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AzK-6j-e8N">
                                                 <rect key="frame" x="0.0" y="74" width="330" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Add"/>
+                                                <connections>
+                                                    <action selector="didPressAddTask:forEvent:" destination="xnl-Nf-CqP" eventType="touchUpInside" id="jcR-8q-bxY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -997,7 +1003,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Tasks Completed! 🎉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocY-Sk-fnl">
-                                        <rect key="frame" x="52" y="20" width="246" height="20"/>
+                                        <rect key="frame" x="52.666666666666686" y="20" width="245" height="20"/>
                                         <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1005,6 +1011,10 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TyU-1e-G2L">
                                         <rect key="frame" x="0.0" y="50" width="350" height="150"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="xnl-Nf-CqP" id="FGa-Iy-qzz"/>
+                                            <outlet property="delegate" destination="xnl-Nf-CqP" id="rp7-7G-Veb"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
@@ -1031,6 +1041,11 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="nam-Qj-Hho"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IS9-xt-rFY"/>
@@ -1044,6 +1059,10 @@
                             <constraint firstItem="MPT-iV-1wg" firstAttribute="centerX" secondItem="8jb-Jc-eK3" secondAttribute="centerX" id="t2K-kc-XOE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TyU-1e-G2L" id="ssw-LN-Tkf"/>
+                        <outlet property="taskTextField" destination="rug-Wf-UuD" id="KK5-vm-GE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWk-z3-pEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

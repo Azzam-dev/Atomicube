@@ -20,14 +20,16 @@ final class MainCoordinator: Coordinator {
         let vc = PagesVC.instantiate()
         
         let moodVC = MoodVC.instantiate()
+        let tasksVC = TasksVC.instantiate()
         let habitsVC = HabitsVC.instantiate()
         let dayRatingVC = DayRatingVC.instantiate()
         
         moodVC.coordinator = self
+        tasksVC.coordinator = self
         habitsVC.coordinator = self
         dayRatingVC.coordinator = self
         
-        vc.pages = [moodVC , habitsVC, dayRatingVC]
+        vc.pages = [moodVC, tasksVC, habitsVC, dayRatingVC]
         navigationController.pushViewController(vc, animated: false)
     }
     

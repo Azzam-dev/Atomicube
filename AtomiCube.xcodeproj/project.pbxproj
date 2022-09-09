@@ -25,6 +25,7 @@
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
 		2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */; };
+		2195857828CB762500FB2322 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857728CB762500FB2322 /* TasksVC.swift */; };
 		21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3428B9196C002BDDD3 /* Mood.swift */; };
 		21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */; };
 		21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */; };
@@ -66,6 +67,7 @@
 		21827AEB28B88AE300C984BF /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
 		2195857228C91C3800FB2322 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
+		2195857728CB762500FB2322 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
 		21DF9C3428B9196C002BDDD3 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
 		21DF9C3928B91AB6002BDDD3 /* HabitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewModel.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				21E4863028C50BA700D2435E /* PagesVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
+				2195857728CB762500FB2322 /* TasksVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
 				3496E80328B5F39100A230D3 /* DayRatingVC.swift */,
 				4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */,
@@ -453,6 +456,7 @@
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
 				21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */,
+				2195857828CB762500FB2322 /* TasksVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				214D5B5228C3647B007E1545 /* Coordinator.swift in Sources */,
 				2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */,
