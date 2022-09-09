@@ -345,11 +345,11 @@
 		4ED4BF3128C3F3D3003C0A6D /* lottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				4ED4BF3528C3F40A003C0A6D /* poker.json */,
-				4ED4BF3428C3F40A003C0A6D /* sulked.json */,
-				4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */,
-				4ED4BF3328C3F40A003C0A6D /* smiley.json */,
 				4ED4BF3228C3F40A003C0A6D /* sad.json */,
+				4ED4BF3428C3F40A003C0A6D /* sulked.json */,
+				4ED4BF3528C3F40A003C0A6D /* poker.json */,
+				4ED4BF3328C3F40A003C0A6D /* smiley.json */,
+				4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */,
 			);
 			path = lottieAnimation;
 			sourceTree = "<group>";

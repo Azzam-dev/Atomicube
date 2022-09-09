@@ -15,6 +15,7 @@ class MoodVC: UIViewController, Storyboarded {
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
     @IBOutlet weak var moodEmojiView: AnimationView!
+    @IBOutlet weak var typeMood: UILabel!
     
     
     var mood: Mood = RealmRepository.shared.getMood()
