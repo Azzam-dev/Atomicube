@@ -13,7 +13,7 @@ class JourneyCell: UITableViewCell {
 //    All this IBOutlet for Mood
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var feelingLabel: UILabel!
     @IBOutlet weak var moodProgress: UIProgressView!
     
     override func awakeFromNib() {
@@ -27,12 +27,12 @@ class JourneyCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func config(numberOfMood: Int) {
-        let (emoji, feeling) = MoodService.shared.getMoodEmoji(with: numberOfMood)
+    func config(moodValue: Int) {
+        let (emoji, feeling, _, _) = MoodService.shared.getMoodEmoji(with: MoodType(moodValue))
         emojiLabel.text = emoji
-        typeLabel.text = feeling
-        rateLabel.text = String(numberOfMood) + "%"
-        moodProgress.progress = Float(numberOfMood) / 100
+        feelingLabel.text = feeling
+        rateLabel.text = String(moodValue) + "%"
+        moodProgress.progress = Float(moodValue) / 100
         
     }
     

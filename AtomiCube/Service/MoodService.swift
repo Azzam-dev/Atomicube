@@ -17,45 +17,34 @@ class MoodService {
         view.play()
     }
     
-     func getMoodEmoji(for view: AnimationView, with moodValue: Float?) {
-        guard let moodValue = moodValue else {
-            print("getMoodEmoji() received nil value")
-            lottileAnimation(view: view, type: "poker")
-            return
-        }
-
-        switch moodValue.rounded() {
-        case 0...25:
+    func getMoodEmoji(for view: AnimationView, with mood: MoodType) {
+        switch mood {
+        case .sad:
             lottileAnimation(view: view, type: "sad")
-        case 26...45:
+        case .bored:
             lottileAnimation(view: view, type: "sulked")
-        case 46...55:
+        case .normal:
             lottileAnimation(view: view, type: "poker")
-        case 56...75:
+        case .good:
             lottileAnimation(view: view, type: "smiley")
-        case 76...100:
+        case .happy:
             lottileAnimation(view: view, type: "lovelyKiss")
-        default:
-            print("getMoodEmoji() received out of range value")
-            lottileAnimation(view: view, type: "poker")
         }
     }
     
-    func getMoodEmoji(with value: Int) -> (emoji: String, feeling: String) {
-        switch value {
-        case 0...25:
-            return ("😩", "Sad")
-        case 26...45:
-            return ("😒", "Bad Mood")
-        case 46...55:
-            return ("😐", "Good")
-        case 56...75:
-            return ("🙂", "Good Mood")
-        case 76...100:
-            return ("😊", "Happy")
-        default:
-            print("unexpected value for the mood cell")
-            return ("😐", "Good")
+    func getMoodEmoji(with mood: MoodType) -> (emoji: String, feeling: String, description: String, color: UIColor) {
+        
+        switch mood {
+        case .sad:
+            return ("😩", "Sad", "Sad!", .systemRed)
+        case .bored:
+            return ("😒", "Bored", "Boring..", .systemBrown)
+        case .normal:
+            return ("😐", "Normal", "Nothing", .label)
+        case .good:
+            return ("🙂", "Good", "Joyful", .systemBlue)
+        case .happy:
+            return ("😊", "Happy", "Happy!" , .systemGreen)
         }
     }
 }

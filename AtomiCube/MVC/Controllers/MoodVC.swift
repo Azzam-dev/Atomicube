@@ -15,7 +15,7 @@ class MoodVC: UIViewController, Storyboarded {
     @IBOutlet weak var progressMood: UIProgressView!
     @IBOutlet weak var sliderMood: UISlider!
     @IBOutlet weak var moodEmojiView: AnimationView!
-    @IBOutlet weak var typeMood: UILabel!
+    @IBOutlet weak var moodDescription: UILabel!
     
     
     var mood: Mood = RealmRepository.shared.getMood()
@@ -31,11 +31,16 @@ class MoodVC: UIViewController, Storyboarded {
     }
     
     @IBAction func sliderEventDidChange(_ sender: UISlider, forEvent event: UIEvent) {
-        let todaysMoodValue = sender.value
-        MoodService.shared.getMoodEmoji(for: moodEmojiView, with: todaysMoodValue)
+        let todaysMood = MoodType(sender.value)
+        let (_, _, description, color) = MoodService.shared.getMoodEmoji(with: todaysMood)
+        
+        MoodService.shared.getMoodEmoji(for: moodEmojiView, with: todaysMood)
+        moodDescription.text = description
+        moodDescription.textColor = color
+        
         if let eventPhase = event.allTouches?.first?.phase {
             if eventPhase == .ended {
-                mainStore.dispatch(UpdateMoodAction(newMoodValue: todaysMoodValue))
+                mainStore.dispatch(UpdateMoodAction(newMoodValue: sender.value))
             }
         }
     }
@@ -63,8 +68,13 @@ extension MoodVC: StoreSubscriber {
     }
     
     func newState(state: AppState) {
-        sliderMood.value = mood.values.last ?? 50.0
-        MoodService.shared.getMoodEmoji(for: moodEmojiView, with: mood.values.last)
+        let lastMood = mood.values.last ?? 50.0
+        let (_, _, description, color) = MoodService.shared.getMoodEmoji(with: MoodType(lastMood))
+        MoodService.shared.getMoodEmoji(for: moodEmojiView, with: MoodType(lastMood))
+        moodDescription.text = description
+        moodDescription.textColor = color
+        sliderMood.value = lastMood
         progressMood.progress = getAverageMood(from: mood)
+        
     }
 }

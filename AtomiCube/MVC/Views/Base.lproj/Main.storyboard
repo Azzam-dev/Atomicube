@@ -118,8 +118,8 @@
                                             <constraint firstAttribute="height" constant="110" id="cYF-Rj-iMX"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a rating to your mood at this moment ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-P7-cEc">
-                                        <rect key="frame" x="25.666666666666657" y="63.666666666666629" width="299" height="13"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record the status of your current mood" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8l-P7-cEc">
+                                        <rect key="frame" x="40" y="63.666666666666629" width="270.33333333333331" height="13"/>
                                         <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="13"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,10 +160,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="moodDescription" destination="LV3-Fe-eGl" id="9du-HN-HyR"/>
                         <outlet property="moodEmojiView" destination="DaN-9M-qfr" id="gYB-71-aeV"/>
                         <outlet property="progressMood" destination="y9e-IB-SOx" id="Lc5-JP-Z82"/>
                         <outlet property="sliderMood" destination="bxS-QH-bex" id="PKA-uj-TtT"/>
-                        <outlet property="typeMood" destination="LV3-Fe-eGl" id="9du-HN-HyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -265,9 +265,9 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="emojiLabel" destination="HMa-i3-Wfr" id="ekS-tN-2c6"/>
+                                                    <outlet property="feelingLabel" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
                                                     <outlet property="moodProgress" destination="mZ3-HN-Ze6" id="2Nz-xW-zqN"/>
                                                     <outlet property="rateLabel" destination="oLx-5E-1Gy" id="2vY-iP-ENT"/>
-                                                    <outlet property="typeLabel" destination="MqH-kI-cml" id="iYz-Qg-vEU"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -369,25 +369,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUF-u2-QR4" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
-                                <rect key="frame" x="20" y="144" width="350" height="153"/>
+                                <rect key="frame" x="20" y="144" width="350" height="144"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="PK7-Z7-ucl">
-                                        <rect key="frame" x="20" y="20" width="310" height="113"/>
+                                        <rect key="frame" x="20" y="20" width="310" height="104"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-eG-pJT">
-                                                <rect key="frame" x="0.0" y="0.0" width="310" height="30.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="27.333333333333332"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-Jj-PLF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="23.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="20.333333333333332"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-fs-Gdz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="23.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-NP-5TQ">
-                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="23.333333333333332"/>
+                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -395,24 +395,24 @@
                                                         </subviews>
                                                     </stackView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-Eo-7rm">
-                                                        <rect key="frame" x="0.0" y="26.333333333333343" width="310" height="4"/>
+                                                        <rect key="frame" x="0.0" y="23.333333333333343" width="310" height="4"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="c6Q-sO-ymr">
-                                                <rect key="frame" x="0.0" y="41.333333333333343" width="310" height="30.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="38.333333333333343" width="310" height="27.333333333333329"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QEz-J9-Cqa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="23.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="20.333333333333332"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAt-jH-TlX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75.333333333333329" height="23.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeP-CR-qgM">
-                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="23.333333333333332"/>
+                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -420,24 +420,24 @@
                                                         </subviews>
                                                     </stackView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q9g-uO-jLT">
-                                                        <rect key="frame" x="0.0" y="26.333333333333314" width="310" height="4"/>
+                                                        <rect key="frame" x="0.0" y="23.333333333333314" width="310" height="4"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Psx-FU-gC7">
-                                                <rect key="frame" x="0.0" y="82.666666666666657" width="310" height="30.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="76.666666666666657" width="310" height="27.333333333333329"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="omC-uF-P2D">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="23.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="20.333333333333332"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzk-6Q-l6A">
-                                                                <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="23.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmk-K7-Ikd">
-                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="23.333333333333332"/>
+                                                                <rect key="frame" x="274.33333333333331" y="0.0" width="35.666666666666686" height="20.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -445,7 +445,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-tX-sOj">
-                                                        <rect key="frame" x="0.0" y="26.333333333333343" width="310" height="4"/>
+                                                        <rect key="frame" x="0.0" y="23.333333333333343" width="310" height="4"/>
                                                     </progressView>
                                                 </subviews>
                                             </stackView>

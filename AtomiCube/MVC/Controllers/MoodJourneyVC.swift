@@ -30,7 +30,7 @@ extension MoodJourneyVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! JourneyCell
-        cell.config(numberOfMood: Int(moodValues[indexPath.row]))
+        cell.config(moodValue: Int(moodValues[indexPath.row]))
         return cell
     }
 }
