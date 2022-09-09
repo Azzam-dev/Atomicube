@@ -11,10 +11,10 @@ import Lottie
 class JourneyCell: UITableViewCell {
     
 //    All this IBOutlet for Mood
-    @IBOutlet weak var emoji: UILabel!
-    @IBOutlet weak var rate: UILabel!
-    @IBOutlet weak var type: UILabel!
-    @IBOutlet weak var progressMood: UIProgressView!
+    @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var moodProgress: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,27 +28,11 @@ class JourneyCell: UITableViewCell {
     }
 
     func config(numberOfMood: Int) {
-        switch numberOfMood {
-        case 0...25:
-            emoji.text = "😩"
-            type.text = "Sad"
-        case 26...45:
-            emoji.text = "😒"
-            type.text = "Bad Mood"
-        case 46...55:
-            emoji.text = "😐"
-            type.text = "Good"
-        case 56...75:
-            emoji.text = "🙂"
-            type.text = "Good Mood"
-        case 76...100:
-            emoji.text = "😊"
-            type.text = "Happy"
-        default:
-            print("unexpected value for the mood cell")
-        }
-        rate.text = String(numberOfMood) + "%"
-        progressMood.progress = Float(numberOfMood) / 100
+        let (emoji, feeling) = MoodService.shared.getMoodEmoji(with: numberOfMood)
+        emojiLabel.text = emoji
+        typeLabel.text = feeling
+        rateLabel.text = String(numberOfMood) + "%"
+        moodProgress.progress = Float(numberOfMood) / 100
         
     }
     
