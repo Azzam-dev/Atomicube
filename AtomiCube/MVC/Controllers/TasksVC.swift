@@ -15,10 +15,15 @@ class TasksVC: UIViewController, Storyboarded {
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    var celebrationView = CelebrationView(frame: .zero)
+    
     var tasks = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        celebrationView = CelebrationView(frame: view.bounds)
+        view.addSubview(celebrationView)
         
         taskTextField.clearButtonMode = .unlessEditing
         
@@ -52,6 +57,7 @@ extension TasksVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath), let task = cell.textLabel?.text {
             cell.textLabel?.attributedText = "✔️ \(task)".strikeThrough(range: NSMakeRange(3, task.length))
+            celebrationView.play()
         }
     }
     

@@ -48,6 +48,8 @@ class RealmRepository {
     }
     
     
+    // MARK: - Mood
+    
     // MARK: Create
     func createNewMood() -> Mood {
         let mood = Mood()
@@ -82,6 +84,31 @@ class RealmRepository {
             return mood
         }
         return nil
+    }
+    
+    
+    // MARK: - Tasks
+    
+    // MARK: Create
+    func createNewTask() {
+        
+    }
+    
+    
+    // MARK: Read
+    func getTasks() {
+        
+    }
+    
+    // MARK: Update
+    func addTaskValue(with value: Task) {
+        
+    }
+    
+    
+    // MARK: Delete
+    func deleteTask() {
+        
     }
 }
 
