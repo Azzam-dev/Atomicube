@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2111BD5E28CB98DE008A1525 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BD5D28CB98DE008A1525 /* Task.swift */; };
+		2111BD6228CCAF45008A1525 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2111BD6128CCAF45008A1525 /* confetti.json */; };
+		2111BD6428CCB25D008A1525 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BD6328CCB25D008A1525 /* CelebrationView.swift */; };
+		2111BD6628CCB984008A1525 /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2111BD6528CCB984008A1525 /* party.json */; };
 		214D5B4628C28849007E1545 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4528C28849007E1545 /* ReSwift */; };
 		214D5B4928C2887F007E1545 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4828C2887F007E1545 /* Realm */; };
 		214D5B4B28C2887F007E1545 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4A28C2887F007E1545 /* RealmSwift */; };
@@ -53,6 +57,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2111BD5D28CB98DE008A1525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2111BD6128CCAF45008A1525 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		2111BD6328CCB25D008A1525 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
+		2111BD6528CCB984008A1525 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		214D5B4E28C34464007E1545 /* monogamma-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monogamma-regular.otf"; sourceTree = "<group>"; };
 		214D5B5128C3647B007E1545 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		214D5B5328C3719C007E1545 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -111,6 +119,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2111BD5F28CCAEE8008A1525 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				4ED4BF3228C3F40A003C0A6D /* sad.json */,
+				4ED4BF3428C3F40A003C0A6D /* sulked.json */,
+				4ED4BF3528C3F40A003C0A6D /* poker.json */,
+				4ED4BF3328C3F40A003C0A6D /* smiley.json */,
+				4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		2111BD6028CCAEFE008A1525 /* Celebration */ = {
+			isa = PBXGroup;
+			children = (
+				2111BD6128CCAF45008A1525 /* confetti.json */,
+				2111BD6528CCB984008A1525 /* party.json */,
+			);
+			path = Celebration;
+			sourceTree = "<group>";
+		};
 		214D5B4C28C343A3007E1545 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +182,7 @@
 			children = (
 				21EB660328B1764D0045C3BB /* LaunchScreen.storyboard */,
 				21EB65FE28B1764C0045C3BB /* Main.storyboard */,
+				2111BD6328CCB25D008A1525 /* CelebrationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				21DF9C3428B9196C002BDDD3 /* Mood.swift */,
+				2111BD5D28CB98DE008A1525 /* Task.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -348,11 +379,8 @@
 		4ED4BF3128C3F3D3003C0A6D /* lottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				4ED4BF3228C3F40A003C0A6D /* sad.json */,
-				4ED4BF3428C3F40A003C0A6D /* sulked.json */,
-				4ED4BF3528C3F40A003C0A6D /* poker.json */,
-				4ED4BF3328C3F40A003C0A6D /* smiley.json */,
-				4ED4BF3628C3F40A003C0A6D /* lovelyKiss.json */,
+				2111BD6028CCAEFE008A1525 /* Celebration */,
+				2111BD5F28CCAEE8008A1525 /* Mood */,
 			);
 			path = lottieAnimation;
 			sourceTree = "<group>";
@@ -431,9 +459,11 @@
 				21EB660528B1764D0045C3BB /* LaunchScreen.storyboard in Resources */,
 				4ED4BF3A28C3F40B003C0A6D /* poker.json in Resources */,
 				4ED4BF3B28C3F40B003C0A6D /* lovelyKiss.json in Resources */,
+				2111BD6628CCB984008A1525 /* party.json in Resources */,
 				21EB660228B1764D0045C3BB /* Assets.xcassets in Resources */,
 				4ED4BF3828C3F40B003C0A6D /* smiley.json in Resources */,
 				4ED4BF3728C3F40A003C0A6D /* sad.json in Resources */,
+				2111BD6228CCAF45008A1525 /* confetti.json in Resources */,
 				21EB660028B1764C0045C3BB /* Main.storyboard in Resources */,
 				4ED4BF3928C3F40B003C0A6D /* sulked.json in Resources */,
 				214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */,
@@ -455,6 +485,7 @@
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
+				2111BD6428CCB25D008A1525 /* CelebrationView.swift in Sources */,
 				21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */,
 				2195857828CB762500FB2322 /* TasksVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
@@ -469,6 +500,7 @@
 				4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
+				2111BD5E28CB98DE008A1525 /* Task.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
 				21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */,
 				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
@@ -621,7 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AtomiCube/App/Info.plist;
@@ -637,7 +669,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CAOCAP.AtomiCube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -652,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AtomiCube/App/Info.plist;
@@ -668,7 +700,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CAOCAP.AtomiCube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
