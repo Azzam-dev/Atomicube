@@ -53,7 +53,12 @@ class RealmRepository {
     // MARK: Create
     func createNewMood() -> Mood {
         let mood = Mood()
-        try! localRealm.write { localRealm.add(mood) }
+        do {
+            try localRealm.write { localRealm.add(mood) }
+        } catch {
+            print("Error: createNewMood(), with error message: \(error)")
+        }
+        
         return mood
     }
     
@@ -65,14 +70,15 @@ class RealmRepository {
         } else {
             return createNewMood()
         }
-        
     }
     
     // MARK: Update
     func addMoodValue(with value: Float) {
         let mood = getMood()
-        try! localRealm.write {
-            mood.values.append(value)
+        do {
+            try localRealm.write { mood.values.append(value) }
+        } catch {
+            print("Error: addMoodValue(), with error message: \(error)")
         }
     }
     
@@ -80,8 +86,13 @@ class RealmRepository {
     // MARK: Delete
     func deleteMood() -> Mood? {
         if let mood = localRealm.object(ofType: Mood.self, forPrimaryKey: "Mood") {
-            try! localRealm.write { localRealm.delete(mood) }
-            return mood
+            do {
+                try localRealm.write { localRealm.delete(mood) }
+                return mood
+            } catch {
+                print("Error: deleteMood(), with error message: \(error)")
+                return nil
+            }
         }
         return nil
     }
@@ -90,25 +101,65 @@ class RealmRepository {
     // MARK: - Tasks
     
     // MARK: Create
-    func createNewTask() {
-        
+    func createNewTask() -> Tasks {
+        let tasks = Tasks()
+        do {
+            try localRealm.write { localRealm.add(tasks) }
+        } catch {
+            print("Error: createNewTask(), with error message: \(error)")
+        }
+        return tasks
     }
     
     
     // MARK: Read
-    func getTasks() {
-        
+    func getTasks() -> Tasks {
+        if let tasks = localRealm.object(ofType: Tasks.self, forPrimaryKey: "Tasks") {
+            return tasks
+        } else {
+            return createNewTask()
+        }
     }
     
     // MARK: Update
-    func addTaskValue(with value: Task) {
-        
+    func add(task: Task) {
+        let tasks = getTasks()
+        do {
+            try localRealm.write { tasks.values.append(task) }
+        } catch {
+            print("Error: addTaskValue(), with error message: \(error)")
+        }
+    }
+    
+    func edit(task: Task, newTitle: String) {
+        do {
+            try localRealm.write { task.title = newTitle}
+        } catch {
+            print("Error: edit(task,newTitle), with error message: \(error)")
+        }
+    }
+    
+    func toggle(task: Task) {
+        do {
+            try localRealm.write { task.isCompleted.toggle() }
+        } catch {
+            print("Error: toggle(task), with error message: \(error)")
+        }
     }
     
     
     // MARK: Delete
-    func deleteTask() {
-        
+    func deleteAllTasks() -> Tasks? {
+        if let tasks = localRealm.object(ofType: Tasks.self, forPrimaryKey: "Tasks") {
+            do {
+                try localRealm.write { localRealm.delete(tasks) }
+                return tasks
+            } catch {
+                print("Error: deleteAllTasks(), with error message: \(error)")
+                return nil
+            }
+        }
+        return nil
     }
 }
 

@@ -29,7 +29,6 @@ class CelebrationView: UIView {
         setupView()
     }
     
-    //common func to init our view
     private func setupView() {
         isUserInteractionEnabled = false
         confettiView = AnimationView(frame: self.bounds)
@@ -37,6 +36,10 @@ class CelebrationView: UIView {
         addSubview(confettiView)
     }
     
+    
+    /// Plays the animation from its current state to the end.
+    ///
+    /// - Parameter celebration: An optional CelebrationType to be played.
     func play(_ celebration: CelebrationType = .confetti) {
         confettiView.animation = Animation.named(celebration.rawValue)
         confettiView.play()

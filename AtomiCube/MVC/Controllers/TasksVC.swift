@@ -16,23 +16,19 @@ class TasksVC: UIViewController, Storyboarded {
     @IBOutlet weak var tableView: UITableView!
     
     var celebrationView = CelebrationView(frame: .zero)
+    var tasks: Tasks = RealmRepository.shared.getTasks()
     
-    var tasks = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         celebrationView = CelebrationView(frame: view.bounds)
         view.addSubview(celebrationView)
-        
         taskTextField.clearButtonMode = .unlessEditing
-        
         hideKeyboardWhenTappedAround()
     }
 
     @IBAction func didPressAddTask(_ sender: Any, forEvent event: UIEvent) {
-        if let task = taskTextField.text {
-            tasks.append(task)
+        if let taskTitle = taskTextField.text {
+            RealmRepository.shared.add(task: Task(title: taskTitle))
             tableView.reloadData()
             taskTextField.text = ""
         }
@@ -43,22 +39,38 @@ class TasksVC: UIViewController, Storyboarded {
 extension TasksVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return tasks.values.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = tasks[indexPath.row]
         cell.backgroundColor = .clear
         cell.selectionStyle = .none
+        
+        let task = tasks.values[indexPath.row]
+        if task.isCompleted {
+            cell.textLabel?.attributedText = "✔️ \(task.title)".strikeThrough(range: NSMakeRange(3, task.title.length))
+        } else {
+            cell.textLabel?.text = task.title
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath), let task = cell.textLabel?.text {
-            cell.textLabel?.attributedText = "✔️ \(task)".strikeThrough(range: NSMakeRange(3, task.length))
-            celebrationView.play()
+        let task = tasks.values[indexPath.row]
+        RealmRepository.shared.toggle(task: task)
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            if task.isCompleted {
+                cell.textLabel?.attributedText = "✔️ \(task.title)".strikeThrough(range: NSMakeRange(3, task.title.length))
+                celebrationView.play()
+            } else {
+                cell.textLabel?.text = task.title
+            }
         }
+        
+        
     }
     
     

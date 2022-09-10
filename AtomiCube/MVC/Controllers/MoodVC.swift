@@ -17,7 +17,6 @@ class MoodVC: UIViewController, Storyboarded {
     @IBOutlet weak var moodEmojiView: AnimationView!
     @IBOutlet weak var moodDescription: UILabel!
     
-    
     var mood: Mood = RealmRepository.shared.getMood()
     
     override func viewDidLoad() {

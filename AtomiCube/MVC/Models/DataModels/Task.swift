@@ -18,13 +18,13 @@ class Tasks: Object {
     }
 }
 
-class Task: Object {
-    @Persisted var text = ""
-    @Persisted var isDone = false
+class Task: Object, ObjectKeyIdentifiable {
+    @Persisted(primaryKey: true) var id: ObjectId
+    @Persisted var title = ""
+    @Persisted var isCompleted = false
     
-    convenience init(text: String, isDone: Bool) {
+    convenience init(title: String) {
         self.init()
-        self.text = text
-        self.isDone = isDone
+        self.title = title
     }
 }
