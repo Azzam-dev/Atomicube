@@ -55,7 +55,6 @@ class RealmRepository {
         return mood
     }
     
-    
     // MARK: Read
     func getMood() -> Mood {
         if let mood = localRealm.object(ofType: Mood.self, forPrimaryKey: "Mood") {
@@ -73,7 +72,6 @@ class RealmRepository {
             mood.values.append(value)
         }
     }
-    
     
     // MARK: Delete
     func deleteMood() -> Mood? {

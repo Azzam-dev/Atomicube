@@ -83,6 +83,19 @@ class DesignableImage: UIImageView {
 
 @IBDesignable
 class DesignableTextField: UITextField {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupUnderlinedTextField()
+    }
+    
+    func setupUnderlinedTextField() {
+        let buttomLayer = CALayer()
+        buttomLayer.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width , height: 1)
+        buttomLayer.backgroundColor = UIColor.black.cgColor
+        self.layer.addSublayer(buttomLayer)
+    }
+    
 }
 
 extension UIView {
