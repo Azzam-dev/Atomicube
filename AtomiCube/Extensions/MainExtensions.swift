@@ -84,16 +84,25 @@ class DesignableImage: UIImageView {
 @IBDesignable
 class DesignableTextField: UITextField {
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setupUnderlinedTextField()
+    @IBInspectable
+    var underline: CGFloat = 0 {
+        didSet {
+            addUnderlineLayer(lineWidth: underline)
+        }
     }
     
-    func setupUnderlinedTextField() {
-        let buttomLayer = CALayer()
-        buttomLayer.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width , height: 1)
-        buttomLayer.backgroundColor = UIColor.black.cgColor
-        self.layer.addSublayer(buttomLayer)
+    @IBInspectable
+    var underlineColor: UIColor = .black {
+        didSet {
+            addUnderlineLayer(lineWidth: underline)
+        }
+    }
+    
+    func addUnderlineLayer(lineWidth: CGFloat) {
+        let bottomLayer = CALayer()
+        bottomLayer.frame = CGRect(x: 0, y: frame.height, width: frame.width , height: lineWidth)
+        bottomLayer.backgroundColor = underlineColor.cgColor
+        layer.addSublayer(bottomLayer)
     }
     
 }

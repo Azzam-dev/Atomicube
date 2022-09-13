@@ -43,7 +43,7 @@ class HabitsVC: UIViewController, Storyboarded {
         
     }
 
-    @IBAction func ChangeHabitTextField(_ sender: UITextField) {
+    @IBAction func didChangeHabitTextField(_ sender: UITextField) {
         switch sender.tag {
         case 1:
             habitsLabel[0].text = sender.text
