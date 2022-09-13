@@ -87,21 +87,21 @@ class DesignableTextField: UITextField {
     @IBInspectable
     var underline: CGFloat = 0 {
         didSet {
-            addUnderlineLayer(lineWidth: underline)
+            if underline > 0 { addUnderlineLayer(lineWidth: underline) }
         }
     }
     
     @IBInspectable
-    var underlineColor: UIColor = .black {
+    var lineColor: UIColor = .black {
         didSet {
-            addUnderlineLayer(lineWidth: underline)
+            if underline > 0 { addUnderlineLayer(lineWidth: underline) }
         }
     }
     
     func addUnderlineLayer(lineWidth: CGFloat) {
         let bottomLayer = CALayer()
         bottomLayer.frame = CGRect(x: 0, y: frame.height, width: frame.width , height: lineWidth)
-        bottomLayer.backgroundColor = underlineColor.cgColor
+        bottomLayer.backgroundColor = lineColor.cgColor
         layer.addSublayer(bottomLayer)
     }
     
