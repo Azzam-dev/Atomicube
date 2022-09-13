@@ -11,12 +11,12 @@ import ReSwift
 class HabitsVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
+    @IBOutlet var habitsLabel: [UILabel]!
     @IBOutlet var habitsProgress: [UIProgressView]!
     @IBOutlet var habitsPercentage: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
@@ -42,8 +42,20 @@ class HabitsVC: UIViewController, Storyboarded {
         mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .third))
         
     }
-    
-    
+
+    @IBAction func didChangeHabitTextField(_ sender: UITextField) {
+        switch sender.tag {
+        case 1:
+            habitsLabel[0].text = sender.text
+        case 2:
+            habitsLabel[1].text = sender.text
+        case 3:
+            habitsLabel[2].text = sender.text
+        default:
+            print("Error From TextField In HabitVC")
+        }
+        
+    }
 }
 
 extension HabitsVC: StoreSubscriber {

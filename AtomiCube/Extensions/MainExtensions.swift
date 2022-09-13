@@ -83,6 +83,28 @@ class DesignableImage: UIImageView {
 
 @IBDesignable
 class DesignableTextField: UITextField {
+    
+    @IBInspectable
+    var underline: CGFloat = 0 {
+        didSet {
+            if underline > 0 { addUnderlineLayer(lineWidth: underline) }
+        }
+    }
+    
+    @IBInspectable
+    var lineColor: UIColor = .black {
+        didSet {
+            if underline > 0 { addUnderlineLayer(lineWidth: underline) }
+        }
+    }
+    
+    func addUnderlineLayer(lineWidth: CGFloat) {
+        let bottomLayer = CALayer()
+        bottomLayer.frame = CGRect(x: 0, y: frame.height, width: frame.width , height: lineWidth)
+        bottomLayer.backgroundColor = lineColor.cgColor
+        layer.addSublayer(bottomLayer)
+    }
+    
 }
 
 extension UIView {

@@ -472,58 +472,103 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrI-om-GOU" customClass="DesignableView" customModule="AtomiCube" customModuleProvider="target">
-                                <rect key="frame" x="20" y="527" width="350" height="183"/>
+                                <rect key="frame" x="20" y="530" width="350" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-sj-O5A">
-                                        <rect key="frame" x="20" y="20" width="310" height="143"/>
+                                        <rect key="frame" x="20" y="20" width="310" height="140"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="Lqo-qA-72I">
-                                                <rect key="frame" x="0.0" y="0.0" width="310" height="31"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lqo-qA-72I">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuK-OW-Erw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="31"/>
-                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Journal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-VN-yPJ" customClass="DesignableTextField" customModule="AtomiCube" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="YVQ-CW-JSL"/>
+                                                            <constraint firstAttribute="width" constant="150" id="pcX-fI-Mwo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="underline">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didChangeHabitTextField:" destination="DwW-J2-mif" eventType="editingChanged" id="wYm-Lk-FGa"/>
+                                                        </connections>
+                                                    </textField>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U8r-r1-ZAc">
-                                                        <rect key="frame" x="261" y="0.0" width="51" height="31"/>
+                                                        <rect key="frame" x="250" y="0.0" width="62" height="30"/>
                                                         <connections>
                                                             <action selector="didChangeHabit1:" destination="DwW-J2-mif" eventType="valueChanged" id="Pfa-yb-TRW"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-v5-H9O">
-                                                <rect key="frame" x="0.0" y="56" width="310" height="31"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="z0k-az-cPQ">
+                                                <rect key="frame" x="0.0" y="55" width="310" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-ge-119">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="31"/>
-                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-nd-f7W">
-                                                        <rect key="frame" x="261" y="0.0" width="51" height="31"/>
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Network" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-B6-2vQ" customClass="DesignableTextField" customModule="AtomiCube" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="EyW-lj-l8k"/>
+                                                            <constraint firstAttribute="height" constant="30" id="QXk-bn-EvG"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="underline">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="didChangeHabit2:" destination="DwW-J2-mif" eventType="valueChanged" id="YeV-e3-FU3"/>
+                                                            <action selector="didChangeHabitTextField:" destination="DwW-J2-mif" eventType="editingChanged" id="bKg-vE-euj"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-es-914">
+                                                        <rect key="frame" x="250" y="0.0" width="62" height="30"/>
+                                                        <connections>
+                                                            <action selector="didChangeHabit2:" destination="DwW-J2-mif" eventType="valueChanged" id="kxK-WM-n7G"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="122" translatesAutoresizingMaskIntoConstraints="NO" id="z0k-az-cPQ">
-                                                <rect key="frame" x="0.0" y="112" width="310" height="31"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-v5-H9O">
+                                                <rect key="frame" x="0.0" y="110" width="310" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE6-Ks-62S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="31"/>
-                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-es-914">
-                                                        <rect key="frame" x="261" y="0.0" width="51" height="31"/>
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-Ni-N5b" customClass="DesignableTextField" customModule="AtomiCube" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="IdG-Se-PPV"/>
+                                                            <constraint firstAttribute="width" constant="150" id="idX-nR-PFI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="underline">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="didChangeHabit3:" destination="DwW-J2-mif" eventType="valueChanged" id="2t3-PB-Sh4"/>
+                                                            <action selector="didChangeHabitTextField:" destination="DwW-J2-mif" eventType="editingChanged" id="H5j-Na-EJL"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ptM-nd-f7W">
+                                                        <rect key="frame" x="250" y="0.0" width="62" height="30"/>
+                                                        <connections>
+                                                            <action selector="didChangeHabit3:" destination="DwW-J2-mif" eventType="valueChanged" id="oCT-xK-8tj"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -569,6 +614,9 @@
                         <outletCollection property="habitsPercentage" destination="uKw-NP-5TQ" collectionClass="NSMutableArray" id="3P8-eO-uf2"/>
                         <outletCollection property="habitsPercentage" destination="DeP-CR-qgM" collectionClass="NSMutableArray" id="F7r-uc-zlE"/>
                         <outletCollection property="habitsPercentage" destination="Cmk-K7-Ikd" collectionClass="NSMutableArray" id="lkX-Kv-gFZ"/>
+                        <outletCollection property="habitsLabel" destination="9h7-fs-Gdz" collectionClass="NSMutableArray" id="Jf3-Zo-mb6"/>
+                        <outletCollection property="habitsLabel" destination="xAt-jH-TlX" collectionClass="NSMutableArray" id="SrE-as-ype"/>
+                        <outletCollection property="habitsLabel" destination="wzk-6Q-l6A" collectionClass="NSMutableArray" id="tY3-NI-0St"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ge4-ny-G6V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1069,6 +1117,17 @@
             <point key="canvasLocation" x="2264.6153846153848" y="82.464454976303315"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="2oM-B6-2vQ">
+            <size key="intrinsicContentSize" width="82" height="21.666666666666668"/>
+        </designable>
+        <designable name="Fvf-VN-yPJ">
+            <size key="intrinsicContentSize" width="81" height="21.666666666666668"/>
+        </designable>
+        <designable name="J2b-Ni-N5b">
+            <size key="intrinsicContentSize" width="87" height="21.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
