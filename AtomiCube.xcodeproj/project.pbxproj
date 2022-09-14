@@ -18,6 +18,8 @@
 		214D5B5228C3647B007E1545 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5128C3647B007E1545 /* Coordinator.swift */; };
 		214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5328C3719C007E1545 /* Storyboarded.swift */; };
 		214D5B5628C37808007E1545 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5528C37808007E1545 /* MainCoordinator.swift */; };
+		21572B6D28D229CD00F114D7 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B6C28D229CD00F114D7 /* NavigationVC.swift */; };
+		21572B6F28D2520700F114D7 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B6E28D2520700F114D7 /* ContainerVC.swift */; };
 		2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173CADE28C2237300CE6E61 /* MoodReducer.swift */; };
 		21827ADD28B6CF8D00C984BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADC28B6CF8D00C984BF /* Store.swift */; };
 		21827ADF28B6CFD200C984BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADE28B6CFD200C984BF /* AppState.swift */; };
@@ -65,6 +67,8 @@
 		214D5B5128C3647B007E1545 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		214D5B5328C3719C007E1545 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		214D5B5528C37808007E1545 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		21572B6C28D229CD00F114D7 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		21572B6E28D2520700F114D7 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		2173CADE28C2237300CE6E61 /* MoodReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReducer.swift; sourceTree = "<group>"; };
 		21827ADC28B6CF8D00C984BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		21827ADE28B6CFD200C984BF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		215365C928B5B750006D6CCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21572B6E28D2520700F114D7 /* ContainerVC.swift */,
+				21572B6C28D229CD00F114D7 /* NavigationVC.swift */,
 				21E4863028C50BA700D2435E /* PagesVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
 				2195857728CB762500FB2322 /* TasksVC.swift */,
@@ -498,7 +504,9 @@
 				21DF9C4628BA34E0002BDDD3 /* RealmRepo.swift in Sources */,
 				21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */,
 				4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */,
+				21572B6F28D2520700F114D7 /* ContainerVC.swift in Sources */,
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
+				21572B6D28D229CD00F114D7 /* NavigationVC.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
 				2111BD5E28CB98DE008A1525 /* Task.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,

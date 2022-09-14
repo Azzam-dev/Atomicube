@@ -17,7 +17,9 @@ final class MainCoordinator: Coordinator {
 
     //MARK: Initial View Controller
     func start() {
-        let vc = PagesVC.instantiate()
+        let navigationVC = NavigationVC.instantiate()
+        
+        let pagesVC = PagesVC.instantiate()
         
         let moodVC = MoodVC.instantiate()
         let tasksVC = TasksVC.instantiate()
@@ -29,8 +31,11 @@ final class MainCoordinator: Coordinator {
         habitsVC.coordinator = self
         dayRatingVC.coordinator = self
         
-        vc.pages = [moodVC, tasksVC, habitsVC, dayRatingVC]
-        navigationController.pushViewController(vc, animated: false)
+        pagesVC.viewControllers = [moodVC, tasksVC, habitsVC, dayRatingVC]
+        pagesVC.controlbackgroundColor = .clear
+        
+        navigationVC.viewControllers = [pagesVC]
+        navigationController.pushViewController(navigationVC, animated: false)
     }
     
     func viewMoodJourney(with mood: Mood) {
