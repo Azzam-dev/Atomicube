@@ -20,6 +20,12 @@
 		214D5B5628C37808007E1545 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5528C37808007E1545 /* MainCoordinator.swift */; };
 		21572B6D28D229CD00F114D7 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B6C28D229CD00F114D7 /* NavigationVC.swift */; };
 		21572B6F28D2520700F114D7 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B6E28D2520700F114D7 /* ContainerVC.swift */; };
+		21572B7128D2C7A300F114D7 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7028D2C7A300F114D7 /* ButtonExtensions.swift */; };
+		21572B7328D2C80C00F114D7 /* TextFieldExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7228D2C80C00F114D7 /* TextFieldExtentions.swift */; };
+		21572B7528D2C94300F114D7 /* ViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7428D2C94300F114D7 /* ViewExtentions.swift */; };
+		21572B7728D2C9C900F114D7 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7628D2C9C900F114D7 /* KeyboardExtensions.swift */; };
+		21572B7928D2CA5E00F114D7 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7828D2CA5E00F114D7 /* LabelExtensions.swift */; };
+		21572B7B28D2CA9800F114D7 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7A28D2CA9800F114D7 /* ImageExtensions.swift */; };
 		2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173CADE28C2237300CE6E61 /* MoodReducer.swift */; };
 		21827ADD28B6CF8D00C984BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADC28B6CF8D00C984BF /* Store.swift */; };
 		21827ADF28B6CFD200C984BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADE28B6CFD200C984BF /* AppState.swift */; };
@@ -69,6 +75,12 @@
 		214D5B5528C37808007E1545 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		21572B6C28D229CD00F114D7 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		21572B6E28D2520700F114D7 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		21572B7028D2C7A300F114D7 /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		21572B7228D2C80C00F114D7 /* TextFieldExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtentions.swift; sourceTree = "<group>"; };
+		21572B7428D2C94300F114D7 /* ViewExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtentions.swift; sourceTree = "<group>"; };
+		21572B7628D2C9C900F114D7 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
+		21572B7828D2CA5E00F114D7 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
+		21572B7A28D2CA9800F114D7 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		2173CADE28C2237300CE6E61 /* MoodReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReducer.swift; sourceTree = "<group>"; };
 		21827ADC28B6CF8D00C984BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		21827ADE28B6CFD200C984BF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -370,6 +382,12 @@
 			isa = PBXGroup;
 			children = (
 				4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */,
+				21572B7628D2C9C900F114D7 /* KeyboardExtensions.swift */,
+				21572B7428D2C94300F114D7 /* ViewExtentions.swift */,
+				21572B7028D2C7A300F114D7 /* ButtonExtensions.swift */,
+				21572B7228D2C80C00F114D7 /* TextFieldExtentions.swift */,
+				21572B7828D2CA5E00F114D7 /* LabelExtensions.swift */,
+				21572B7A28D2CA9800F114D7 /* ImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,13 +502,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3496E80428B5F39100A230D3 /* DayRatingVC.swift in Sources */,
+				21572B7128D2C7A300F114D7 /* ButtonExtensions.swift in Sources */,
 				21DF9C3C28B91BE9002BDDD3 /* DayRatingViewModel.swift in Sources */,
+				21572B7528D2C94300F114D7 /* ViewExtentions.swift in Sources */,
 				214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */,
 				21E4863128C50BA700D2435E /* PagesVC.swift in Sources */,
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
+				21572B7B28D2CA9800F114D7 /* ImageExtensions.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
+				21572B7328D2C80C00F114D7 /* TextFieldExtentions.swift in Sources */,
 				2111BD6428CCB25D008A1525 /* CelebrationView.swift in Sources */,
 				21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */,
 				2195857828CB762500FB2322 /* TasksVC.swift in Sources */,
@@ -508,6 +530,7 @@
 				21EB65F928B1764C0045C3BB /* AppDelegate.swift in Sources */,
 				21572B6D28D229CD00F114D7 /* NavigationVC.swift in Sources */,
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
+				21572B7928D2CA5E00F114D7 /* LabelExtensions.swift in Sources */,
 				2111BD5E28CB98DE008A1525 /* Task.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
 				21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */,
@@ -515,6 +538,7 @@
 				2195857328C91C3800FB2322 /* MoodService.swift in Sources */,
 				214D5B5628C37808007E1545 /* MainCoordinator.swift in Sources */,
 				21DF9C4828BA34EF002BDDD3 /* DefaultsRepo.swift in Sources */,
+				21572B7728D2C9C900F114D7 /* KeyboardExtensions.swift in Sources */,
 				4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
