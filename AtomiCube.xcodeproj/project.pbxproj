@@ -26,6 +26,7 @@
 		21572B7728D2C9C900F114D7 /* KeyboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7628D2C9C900F114D7 /* KeyboardExtensions.swift */; };
 		21572B7928D2CA5E00F114D7 /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7828D2CA5E00F114D7 /* LabelExtensions.swift */; };
 		21572B7B28D2CA9800F114D7 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7A28D2CA9800F114D7 /* ImageExtensions.swift */; };
+		21572B7D28D2CE7B00F114D7 /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21572B7C28D2CE7B00F114D7 /* ChartsVC.swift */; };
 		2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173CADE28C2237300CE6E61 /* MoodReducer.swift */; };
 		21827ADD28B6CF8D00C984BF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADC28B6CF8D00C984BF /* Store.swift */; };
 		21827ADF28B6CFD200C984BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827ADE28B6CFD200C984BF /* AppState.swift */; };
@@ -35,6 +36,7 @@
 		21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE928B6DE6100C984BF /* HabitReducer.swift */; };
 		21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* MoodVC.swift */; };
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
+		219247D828D2D281003FE5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D728D2D281003FE5F7 /* ViewController.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
 		2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */; };
 		2195857828CB762500FB2322 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857728CB762500FB2322 /* TasksVC.swift */; };
@@ -81,6 +83,7 @@
 		21572B7628D2C9C900F114D7 /* KeyboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtensions.swift; sourceTree = "<group>"; };
 		21572B7828D2CA5E00F114D7 /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		21572B7A28D2CA9800F114D7 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		21572B7C28D2CE7B00F114D7 /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
 		2173CADE28C2237300CE6E61 /* MoodReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodReducer.swift; sourceTree = "<group>"; };
 		21827ADC28B6CF8D00C984BF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		21827ADE28B6CFD200C984BF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
 		21827AEB28B88AE300C984BF /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
+		219247D728D2D281003FE5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2195857228C91C3800FB2322 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
 		2195857728CB762500FB2322 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
 		21DF9C3428B9196C002BDDD3 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 				21572B6E28D2520700F114D7 /* ContainerVC.swift */,
 				21572B6C28D229CD00F114D7 /* NavigationVC.swift */,
 				21E4863028C50BA700D2435E /* PagesVC.swift */,
+				219247D728D2D281003FE5F7 /* ViewController.swift */,
+				21572B7C28D2CE7B00F114D7 /* ChartsVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
 				2195857728CB762500FB2322 /* TasksVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
@@ -509,6 +515,7 @@
 				21E4863128C50BA700D2435E /* PagesVC.swift in Sources */,
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
+				219247D828D2D281003FE5F7 /* ViewController.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
 				21572B7B28D2CA9800F114D7 /* ImageExtensions.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
@@ -532,6 +539,7 @@
 				21EB65FB28B1764C0045C3BB /* SceneDelegate.swift in Sources */,
 				21572B7928D2CA5E00F114D7 /* LabelExtensions.swift in Sources */,
 				2111BD5E28CB98DE008A1525 /* Task.swift in Sources */,
+				21572B7D28D2CE7B00F114D7 /* ChartsVC.swift in Sources */,
 				21827AE328B6CFFD00C984BF /* AppReducer.swift in Sources */,
 				21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */,
 				21827AE128B6CFEA00C984BF /* Actions.swift in Sources */,
