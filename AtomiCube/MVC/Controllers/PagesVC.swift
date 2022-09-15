@@ -7,33 +7,27 @@
 
 import UIKit
 
-class PagesVC: UIViewController, Storyboarded {
+class PagesVC: ContainerVC, Storyboarded {
     
-    var pagesContainer = UIView(frame: .zero)
+    @IBOutlet weak var controlView: DesignableView!
     @IBOutlet weak var pageControl: UIPageControl!
-    var pages = [UIViewController]()
+    var controlbackgroundColor: UIColor = .separator
     var transitionSpeed = 0.25
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pageControl.numberOfPages = pages.count
+        pageControl.numberOfPages = viewControllers.count
+        controlView.backgroundColor = controlbackgroundColor
         didChangePage(pageControl)
         initializeGestureRecognizers()
-        initializePages()
     }
     
-    fileprivate func initializePages() {
-        pagesContainer.frame = view.bounds
-        pagesContainer.frame.size.width = CGFloat(pages.count) * view.frame.width
-        for (index, page) in pages.enumerated() {
-            page.view.frame = view.bounds
+    override func addSubViewControllers() {
+        super.addSubViewControllers()
+        container.frame.size.width = CGFloat(viewControllers.count) * view.frame.width
+        for (index, page) in viewControllers.enumerated() {
             page.view.frame.origin.x = CGFloat(index) * view.frame.width
-            pagesContainer.addSubview(page.view)
-            addChild(page)
-            page.didMove(toParent: self)
         }
-        view.insertSubview(pagesContainer, at: 0)
     }
         
     fileprivate func initializeGestureRecognizers() {
@@ -65,7 +59,7 @@ class PagesVC: UIViewController, Storyboarded {
 
     @IBAction func didChangePage(_ sender: UIPageControl) {
         UIView.animate(withDuration: transitionSpeed) {
-            self.pagesContainer.frame.origin.x = CGFloat(-sender.currentPage) * self.view.frame.width
+            self.container.frame.origin.x = CGFloat(-sender.currentPage) * self.view.frame.width
         }
     }
 }
