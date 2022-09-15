@@ -8,7 +8,8 @@
 import UIKit
 
 //TODO: - Change this ViewController's name to something meaningful
-// this is the viewController that will Display the widgets library 
+// this is the viewController that will Display the widgets library
+#warning("Change class name 🤬!")
 class ViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {

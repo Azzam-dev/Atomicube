@@ -37,6 +37,7 @@
 		21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* MoodVC.swift */; };
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
 		219247D828D2D281003FE5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D728D2D281003FE5F7 /* ViewController.swift */; };
+		219247DA28D2D6EA003FE5F7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D928D2D6EA003FE5F7 /* SettingsVC.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
 		2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */; };
 		2195857828CB762500FB2322 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857728CB762500FB2322 /* TasksVC.swift */; };
@@ -94,6 +95,7 @@
 		21827AEB28B88AE300C984BF /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
 		219247D728D2D281003FE5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		219247D928D2D6EA003FE5F7 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		2195857228C91C3800FB2322 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
 		2195857728CB762500FB2322 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
 		21DF9C3428B9196C002BDDD3 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				21E4863028C50BA700D2435E /* PagesVC.swift */,
 				219247D728D2D281003FE5F7 /* ViewController.swift */,
 				21572B7C28D2CE7B00F114D7 /* ChartsVC.swift */,
+				219247D928D2D6EA003FE5F7 /* SettingsVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
 				2195857728CB762500FB2322 /* TasksVC.swift */,
 				3496E80128B5EDC500A230D3 /* HabitsVC.swift */,
@@ -548,6 +551,7 @@
 				21DF9C4828BA34EF002BDDD3 /* DefaultsRepo.swift in Sources */,
 				21572B7728D2C9C900F114D7 /* KeyboardExtensions.swift in Sources */,
 				4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */,
+				219247DA28D2D6EA003FE5F7 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

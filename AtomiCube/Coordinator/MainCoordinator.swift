@@ -20,7 +20,6 @@ final class MainCoordinator: Coordinator {
         let navigationVC = NavigationVC.instantiate()
         
         let chartsVC = ChartsVC.instantiate()
-        let someVC = ViewController.instantiate()
         let pagesVC = PagesVC.instantiate()
         
         let moodVC = MoodVC.instantiate()
@@ -36,8 +35,20 @@ final class MainCoordinator: Coordinator {
         pagesVC.viewControllers = [moodVC, tasksVC, habitsVC, dayRatingVC]
         pagesVC.controlbackgroundColor = .clear
         
-        navigationVC.viewControllers = [pagesVC, someVC, chartsVC]
+        navigationVC.coordinator = self
+        navigationVC.viewControllers = [pagesVC, chartsVC]
         navigationController.pushViewController(navigationVC, animated: false)
+    }
+    
+    func viewSettings() {
+        let vc = SettingsVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    #warning("Change function name 🤬!")
+    func viewViewController() {
+        let vc = ViewController.instantiate()
+        navigationController.present(vc, animated: true)
     }
     
     func viewMoodJourney(with mood: Mood) {
