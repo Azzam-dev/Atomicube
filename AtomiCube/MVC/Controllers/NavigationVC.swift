@@ -43,6 +43,10 @@ class NavigationVC: ContainerVC, Storyboarded {
         
     }
     
+    @IBAction func didPressSettingsButton(_ sender: UIButton) {
+        coordinator?.viewSettings()
+    }
+    
     @IBAction func didPressNavigationButton(_ sender: UIButton) {
         if sender.tag < viewControllers.count {
             navigate(to: sender.tag, animated: true)
