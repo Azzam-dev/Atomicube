@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
       "state" : {
-        "revision" : "7e80c25b51c2ffa238879b07fbfc5baa54bb3050",
-        "version" : "9.6.0"
+        "branch" : "master",
+        "revision" : "161c046ded212fe76fe68f3e8bd4e32ec462960a"
       }
     },
     {
@@ -96,7 +96,7 @@
       "location" : "https://github.com/airbnb/lottie-ios",
       "state" : {
         "branch" : "master",
-        "revision" : "314537ec697719fa33a9d48210f4d06a463286d3"
+        "revision" : "671662e807223b4027d10519c394ac774bc6781d"
       }
     },
     {
@@ -122,8 +122,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "6f6a0f415bd33cf2ced4467e36a47f7c84f0a1d7",
-        "version" : "12.5.1"
+        "revision" : "5da7744b4056ad185c025bccf0924f17f73f7a91",
+        "version" : "12.6.0"
       }
     },
     {
@@ -132,7 +132,7 @@
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "f45856548a324259c629c37e0032a14db9d4aa87"
+        "revision" : "a4e41b471f5ee702c63f2b81b87dc6302fe20e49"
       }
     },
     {
