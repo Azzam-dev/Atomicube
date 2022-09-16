@@ -6,14 +6,65 @@
 //
 
 import SwiftUI
-import Charts
+//import Charts
 
 struct DashboardView: View {
+    @State var number = 0
     var body: some View {
-        Text("Hello, Atomic")
-            .padding(20)
-            .background(.secondary)
-            .border(.black, width: 2)
+        HStack {
+            Button {
+                number = number-2
+                print(number)
+            } label: {
+                Text("--")
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .background(.black)
+                    .border(.gray, width: 2)
+            }
+            Button {
+                number = number-1
+                print(number)
+            } label: {
+                Text("-")
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .background(.black)
+                    .border(.gray, width: 2)
+            }
+            Button {
+                number = 0
+                print(number)
+            } label: {
+                Text("\(number)")
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .background(.black)
+                    .border(.gray, width: 2)
+            }
+            Button {
+                number = number+1
+                print(number)
+            } label: {
+                Text("+")
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .background(.black)
+                    .border(.gray, width: 2)
+            }
+            
+            Button {
+                number = number+2
+                print(number)
+            } label: {
+                Text("++")
+                    .foregroundColor(.white)
+                    .padding(20)
+                    .background(.black)
+                    .border(.gray, width: 2)
+            }
+        }
+
         
     }
 }
