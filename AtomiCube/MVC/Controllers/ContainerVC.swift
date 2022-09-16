@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// A UIViewController that can containe an array of UIViewControllers.
+/// you can use this to containe SwiftUI views using UIHostingController
+///
 class ContainerVC: UIViewController {
 
     var container = UIView(frame: .zero)

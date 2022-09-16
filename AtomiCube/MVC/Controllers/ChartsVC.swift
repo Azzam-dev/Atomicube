@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ChartsVC: UIViewController, Storyboarded {
+// MARK: ChartsVC will use SwiftUI & Charts
+
+class ChartsVC: ContainerVC, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
