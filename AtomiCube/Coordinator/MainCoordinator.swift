@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
@@ -32,6 +33,8 @@ final class MainCoordinator: Coordinator {
         habitsVC.coordinator = self
         dayRatingVC.coordinator = self
         
+        
+        chartsVC.viewControllers = [UIHostingController(rootView: DashboardView())]
         pagesVC.viewControllers = [moodVC, tasksVC, habitsVC, dayRatingVC]
         pagesVC.controlbackgroundColor = .clear
         
