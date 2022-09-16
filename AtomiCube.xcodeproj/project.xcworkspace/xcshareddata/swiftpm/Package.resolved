@@ -12,10 +12,10 @@
     {
       "identity" : "lottie-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/airbnb/lottie-ios",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "314537ec697719fa33a9d48210f4d06a463286d3"
+        "revision" : "314537ec697719fa33a9d48210f4d06a463286d3",
+        "version" : "3.4.3"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core",
       "state" : {
-        "revision" : "6f6a0f415bd33cf2ced4467e36a47f7c84f0a1d7",
-        "version" : "12.5.1"
+        "revision" : "5da7744b4056ad185c025bccf0924f17f73f7a91",
+        "version" : "12.6.0"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/realm/realm-swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "f45856548a324259c629c37e0032a14db9d4aa87"
+        "revision" : "a4e41b471f5ee702c63f2b81b87dc6302fe20e49"
       }
     },
     {
