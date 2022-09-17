@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2111BC0528D4C84900B5BA6E /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC0428D4C84900B5BA6E /* ReSwift */; };
+		2111BC0828D4C88A00B5BA6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC0728D4C88A00B5BA6E /* Realm */; };
+		2111BC0A28D4C88A00B5BA6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC0928D4C88A00B5BA6E /* RealmSwift */; };
+		2111BC0D28D4C8A200B5BA6E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC0C28D4C8A200B5BA6E /* IQKeyboardManagerSwift */; };
+		2111BC1028D4C92A00B5BA6E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC0F28D4C92A00B5BA6E /* Lottie */; };
+		2111BC1228D4CC6C00B5BA6E /* SimpleStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BC1128D4CC6C00B5BA6E /* SimpleStepper.swift */; };
 		2111BC1528D508D400B5BA6E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC1428D508D400B5BA6E /* FirebaseAnalytics */; };
 		2111BC1728D508D400B5BA6E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC1628D508D400B5BA6E /* FirebaseAuth */; };
 		2111BC1928D508D400B5BA6E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2111BC1828D508D400B5BA6E /* FirebaseCrashlytics */; };
@@ -17,9 +23,6 @@
 		2111BD6228CCAF45008A1525 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2111BD6128CCAF45008A1525 /* confetti.json */; };
 		2111BD6428CCB25D008A1525 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BD6328CCB25D008A1525 /* CelebrationView.swift */; };
 		2111BD6628CCB984008A1525 /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2111BD6528CCB984008A1525 /* party.json */; };
-		214D5B4628C28849007E1545 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4528C28849007E1545 /* ReSwift */; };
-		214D5B4928C2887F007E1545 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4828C2887F007E1545 /* Realm */; };
-		214D5B4B28C2887F007E1545 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 214D5B4A28C2887F007E1545 /* RealmSwift */; };
 		214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 214D5B4E28C34464007E1545 /* monogamma-regular.otf */; };
 		214D5B5228C3647B007E1545 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5128C3647B007E1545 /* Coordinator.swift */; };
 		214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5328C3719C007E1545 /* Storyboarded.swift */; };
@@ -46,7 +49,6 @@
 		219247D828D2D281003FE5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D728D2D281003FE5F7 /* ViewController.swift */; };
 		219247DA28D2D6EA003FE5F7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D928D2D6EA003FE5F7 /* SettingsVC.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
-		2195857628C9A56700FB2322 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */; };
 		2195857828CB762500FB2322 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857728CB762500FB2322 /* TasksVC.swift */; };
 		21DF9C3528B9196C002BDDD3 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3428B9196C002BDDD3 /* Mood.swift */; };
 		21DF9C3828B91991002BDDD3 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DF9C3728B91991002BDDD3 /* PlayViewModel.swift */; };
@@ -66,7 +68,6 @@
 		4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25AE28B3E44B00CFE8A9 /* MainExtensions.swift */; };
 		4E8F25B128B88C1C00CFE8A9 /* MoodJourneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B028B88C1C00CFE8A9 /* MoodJourneyVC.swift */; };
 		4E8F25B428B88D3B00CFE8A9 /* JourneyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */; };
-		4ED4BF2D28C38EB7003C0A6D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED4BF2C28C38EB7003C0A6D /* Lottie */; };
 		4ED4BF3728C3F40A003C0A6D /* sad.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3228C3F40A003C0A6D /* sad.json */; };
 		4ED4BF3828C3F40B003C0A6D /* smiley.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3328C3F40A003C0A6D /* smiley.json */; };
 		4ED4BF3928C3F40B003C0A6D /* sulked.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ED4BF3428C3F40A003C0A6D /* sulked.json */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2111BC1128D4CC6C00B5BA6E /* SimpleStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStepper.swift; sourceTree = "<group>"; };
 		2111BD5D28CB98DE008A1525 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		2111BD6128CCAF45008A1525 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		2111BD6328CCB25D008A1525 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				216101C928D3BC85005FC9CA /* DashboardView.swift */,
+				2111BC1128D4CC6C00B5BA6E /* SimpleStepper.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				2195857828CB762500FB2322 /* TasksVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,
 				214D5B5228C3647B007E1545 /* Coordinator.swift in Sources */,
+				2111BC1228D4CC6C00B5BA6E /* SimpleStepper.swift in Sources */,
 				2173CADF28C2237300CE6E61 /* MoodReducer.swift in Sources */,
 				3496E80228B5EDC500A230D3 /* HabitsVC.swift in Sources */,
 				21827ADF28B6CFD200C984BF /* AppState.swift in Sources */,
@@ -846,7 +850,7 @@
 				kind = branch;
 			};
 		};
-		214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		2111BC0628D4C88A00B5BA6E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -854,7 +858,7 @@
 				kind = branch;
 			};
 		};
-		2195857428C9A56700FB2322 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		2111BC0B28D4C8A200B5BA6E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -862,12 +866,12 @@
 				kind = branch;
 			};
 		};
-		4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		2111BC0E28D4C92A00B5BA6E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -905,27 +909,27 @@
 		};
 		214D5B4528C28849007E1545 /* ReSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 214D5B4428C28849007E1545 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			package = 2111BC0328D4C84900B5BA6E /* XCRemoteSwiftPackageReference "ReSwift" */;
 			productName = ReSwift;
 		};
-		214D5B4828C2887F007E1545 /* Realm */ = {
+		2111BC0728D4C88A00B5BA6E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 2111BC0628D4C88A00B5BA6E /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		214D5B4A28C2887F007E1545 /* RealmSwift */ = {
+		2111BC0928D4C88A00B5BA6E /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 214D5B4728C2887F007E1545 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 2111BC0628D4C88A00B5BA6E /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
-		2195857528C9A56700FB2322 /* IQKeyboardManagerSwift */ = {
+		2111BC0C28D4C8A200B5BA6E /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2195857428C9A56700FB2322 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 2111BC0B28D4C8A200B5BA6E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		4ED4BF2C28C38EB7003C0A6D /* Lottie */ = {
+		2111BC0F28D4C92A00B5BA6E /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4ED4BF2B28C38EB7003C0A6D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 2111BC0E28D4C92A00B5BA6E /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

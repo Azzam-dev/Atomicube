@@ -6,66 +6,38 @@
 //
 
 import SwiftUI
-//import Charts
+import Charts
+
+struct BarChart: View {
+    
+    var mood: Mood = RealmRepository.shared.getMood()
+    
+    var body: some View {
+        if #available(iOS 16.0, *) {
+            Chart {
+                ForEach(Array(mood.values.enumerated()), id: \.offset) { index, mood in
+                    BarMark(
+                        x: .value("Shape Type", index),
+                        y: .value("Total Count", mood)
+                    ).foregroundStyle(by: .value("Shape Color", "Purple"))
+                }
+            }.chartForegroundStyleScale([ "Purple": .purple])
+        } else {
+            // Fallback on earlier versions
+            Text("Please update your device to iOS 16 or later to be able to use this feature")
+        }
+    }
+}
 
 struct DashboardView: View {
-    @State var number = 0
     var body: some View {
-        HStack {
-            Button {
-                number = number-2
-                print(number)
-            } label: {
-                Text("--")
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(.black)
-                    .border(.gray, width: 2)
+        VStack {
+            List {
+                BarChart()
+                    .frame(height: 100)
+                    .padding()
             }
-            Button {
-                number = number-1
-                print(number)
-            } label: {
-                Text("-")
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(.black)
-                    .border(.gray, width: 2)
-            }
-            Button {
-                number = 0
-                print(number)
-            } label: {
-                Text("\(number)")
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(.black)
-                    .border(.gray, width: 2)
-            }
-            Button {
-                number = number+1
-                print(number)
-            } label: {
-                Text("+")
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(.black)
-                    .border(.gray, width: 2)
-            }
-            
-            Button {
-                number = number+2
-                print(number)
-            } label: {
-                Text("++")
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(.black)
-                    .border(.gray, width: 2)
-            }
-        }
-
-        
+        }.padding(.top, 60)
     }
 }
 
