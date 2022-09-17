@@ -37,7 +37,7 @@ struct DashboardView: View {
                     .frame(height: 100)
                     .padding()
             }
-        }.padding(.top, 60)
+        }.padding(.top, 50)
     }
 }
 
