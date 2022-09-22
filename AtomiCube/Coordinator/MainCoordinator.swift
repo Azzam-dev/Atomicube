@@ -48,9 +48,8 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
-    #warning("Change function name 🤬!")
-    func viewViewController() {
-        let vc = ViewController.instantiate()
+    func viewLibrary() {
+        let vc = LibraryVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     

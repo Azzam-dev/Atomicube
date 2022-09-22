@@ -54,8 +54,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func didPressPlusButton(_ sender: UIButton) {
-        #warning("please change function name 🥹")
-        coordinator?.viewViewController()
+        coordinator?.viewLibrary()
     }
     
     

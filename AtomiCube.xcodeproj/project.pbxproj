@@ -46,7 +46,7 @@
 		21827AEA28B6DE6100C984BF /* HabitReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AE928B6DE6100C984BF /* HabitReducer.swift */; };
 		21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AEB28B88AE300C984BF /* MoodVC.swift */; };
 		21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21827AED28B88E8300C984BF /* DayRatingReducer.swift */; };
-		219247D828D2D281003FE5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D728D2D281003FE5F7 /* ViewController.swift */; };
+		219247D828D2D281003FE5F7 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D728D2D281003FE5F7 /* LibraryVC.swift */; };
 		219247DA28D2D6EA003FE5F7 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219247D928D2D6EA003FE5F7 /* SettingsVC.swift */; };
 		2195857328C91C3800FB2322 /* MoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857228C91C3800FB2322 /* MoodService.swift */; };
 		2195857828CB762500FB2322 /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2195857728CB762500FB2322 /* TasksVC.swift */; };
@@ -105,7 +105,7 @@
 		21827AE928B6DE6100C984BF /* HabitReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitReducer.swift; sourceTree = "<group>"; };
 		21827AEB28B88AE300C984BF /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		21827AED28B88E8300C984BF /* DayRatingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingReducer.swift; sourceTree = "<group>"; };
-		219247D728D2D281003FE5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		219247D728D2D281003FE5F7 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
 		219247D928D2D6EA003FE5F7 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		2195857228C91C3800FB2322 /* MoodService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodService.swift; sourceTree = "<group>"; };
 		2195857728CB762500FB2322 /* TasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				21572B6E28D2520700F114D7 /* ContainerVC.swift */,
 				21572B6C28D229CD00F114D7 /* NavigationVC.swift */,
 				21E4863028C50BA700D2435E /* PagesVC.swift */,
-				219247D728D2D281003FE5F7 /* ViewController.swift */,
+				219247D728D2D281003FE5F7 /* LibraryVC.swift */,
 				21572B7C28D2CE7B00F114D7 /* ChartsVC.swift */,
 				219247D928D2D6EA003FE5F7 /* SettingsVC.swift */,
 				21827AEB28B88AE300C984BF /* MoodVC.swift */,
@@ -573,7 +573,7 @@
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
 				216101CA28D3BC85005FC9CA /* DashboardView.swift in Sources */,
-				219247D828D2D281003FE5F7 /* ViewController.swift in Sources */,
+				219247D828D2D281003FE5F7 /* LibraryVC.swift in Sources */,
 				21DF9C4428BA34D2002BDDD3 /* FireBaseRepo.swift in Sources */,
 				21572B7B28D2CA9800F114D7 /* ImageExtensions.swift in Sources */,
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
@@ -753,7 +753,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AtomiCube/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Atomic;
@@ -769,7 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CAOCAP.AtomiCube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -785,7 +785,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AtomiCube/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Atomic;
@@ -801,7 +801,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.5;
+				MARKETING_VERSION = 0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CAOCAP.AtomiCube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
