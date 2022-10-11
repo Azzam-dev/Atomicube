@@ -23,6 +23,9 @@
 		211E8CEF28D5D9DA00C80D49 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 211E8CEE28D5D9DA00C80D49 /* IQKeyboardManagerSwift */; };
 		211E8CF228D5DA3F00C80D49 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 211E8CF128D5DA3F00C80D49 /* Realm */; };
 		211E8CF428D5DA3F00C80D49 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 211E8CF328D5DA3F00C80D49 /* RealmSwift */; };
+		212C11B228F5DF63005CCBB3 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C11B128F5DF63005CCBB3 /* Habit.swift */; };
+		212C11B428F5E526005CCBB3 /* AddNewHabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C11B328F5E526005CCBB3 /* AddNewHabitCell.swift */; };
+		212C11B628F5E568005CCBB3 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212C11B528F5E568005CCBB3 /* HabitCell.swift */; };
 		214D5B4F28C34464007E1545 /* monogamma-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 214D5B4E28C34464007E1545 /* monogamma-regular.otf */; };
 		214D5B5228C3647B007E1545 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5128C3647B007E1545 /* Coordinator.swift */; };
 		214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D5B5328C3719C007E1545 /* Storyboarded.swift */; };
@@ -82,6 +85,9 @@
 		2111BD6328CCB25D008A1525 /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
 		2111BD6528CCB984008A1525 /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		211E8CE828D5D86A00C80D49 /* SimpleStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStepper.swift; sourceTree = "<group>"; };
+		212C11B128F5DF63005CCBB3 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		212C11B328F5E526005CCBB3 /* AddNewHabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabitCell.swift; sourceTree = "<group>"; };
+		212C11B528F5E568005CCBB3 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		214D5B4E28C34464007E1545 /* monogamma-regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monogamma-regular.otf"; sourceTree = "<group>"; };
 		214D5B5128C3647B007E1545 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		214D5B5328C3719C007E1545 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -352,6 +358,7 @@
 			children = (
 				21DF9C3428B9196C002BDDD3 /* Mood.swift */,
 				2111BD5D28CB98DE008A1525 /* Task.swift */,
+				212C11B128F5DF63005CCBB3 /* Habit.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -450,6 +457,8 @@
 			isa = PBXGroup;
 			children = (
 				4E8F25B328B88D3B00CFE8A9 /* JourneyCell.swift */,
+				212C11B528F5E568005CCBB3 /* HabitCell.swift */,
+				212C11B328F5E526005CCBB3 /* AddNewHabitCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -567,8 +576,10 @@
 				21572B7128D2C7A300F114D7 /* ButtonExtensions.swift in Sources */,
 				211E8CE928D5D86A00C80D49 /* SimpleStepper.swift in Sources */,
 				21DF9C3C28B91BE9002BDDD3 /* DayRatingViewModel.swift in Sources */,
+				212C11B428F5E526005CCBB3 /* AddNewHabitCell.swift in Sources */,
 				21572B7528D2C94300F114D7 /* ViewExtentions.swift in Sources */,
 				214D5B5428C3719C007E1545 /* Storyboarded.swift in Sources */,
+				212C11B228F5DF63005CCBB3 /* Habit.swift in Sources */,
 				21E4863128C50BA700D2435E /* PagesVC.swift in Sources */,
 				21827ADD28B6CF8D00C984BF /* Store.swift in Sources */,
 				21827AEE28B88E8400C984BF /* DayRatingReducer.swift in Sources */,
@@ -579,6 +590,7 @@
 				21DF9C3A28B91AB6002BDDD3 /* HabitsViewModel.swift in Sources */,
 				21572B7328D2C80C00F114D7 /* TextFieldExtentions.swift in Sources */,
 				2111BD6428CCB25D008A1525 /* CelebrationView.swift in Sources */,
+				212C11B628F5E568005CCBB3 /* HabitCell.swift in Sources */,
 				21827AEC28B88AE300C984BF /* MoodVC.swift in Sources */,
 				2195857828CB762500FB2322 /* TasksVC.swift in Sources */,
 				4E8F25AF28B3E44B00CFE8A9 /* MainExtensions.swift in Sources */,

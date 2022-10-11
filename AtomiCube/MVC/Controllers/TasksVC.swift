@@ -69,8 +69,6 @@ extension TasksVC: UITableViewDelegate, UITableViewDataSource {
                 cell.textLabel?.text = task.title
             }
         }
-        
-        
     }
     
     

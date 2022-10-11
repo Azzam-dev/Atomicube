@@ -25,14 +25,8 @@ struct UpdateMoodAction: Action { let newMoodValue: Float }
 struct DeleteMoodAction: Action { }
 
 // MARK: actions for Habits
-enum Habit: Int {
-    case first
-    case second
-    case third
-}
-
-struct HabitActionComplete: Action { let completedHabit: Habit }
-struct HabitActionUncomplete: Action { let uncompletedHabit: Habit }
+struct HabitActionComplete: Action {  }
+struct HabitActionUncomplete: Action {  }
 
 
 // MARK: actions for DayRating

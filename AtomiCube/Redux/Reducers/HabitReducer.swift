@@ -12,9 +12,9 @@ func habitReducer(action: Action, state: AppState?) -> AppState {
 
     switch action {
     case let action as HabitActionComplete:
-        state.habits[action.completedHabit.rawValue] = true
+        print(state.habits) //TODO: HabitActionComplete
     case let action as HabitActionUncomplete:
-        state.habits[action.uncompletedHabit.rawValue] = false
+        print(state.habits) //TODO: HabitActionUncomplete
     default:
         break
     }

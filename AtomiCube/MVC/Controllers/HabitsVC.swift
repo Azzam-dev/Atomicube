@@ -11,51 +11,38 @@ import ReSwift
 class HabitsVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
-    @IBOutlet var habitsLabel: [UILabel]!
-    @IBOutlet var habitsProgress: [UIProgressView]!
-    @IBOutlet var habitsPercentage: [UILabel]!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var habits: Habits = RealmRepository.shared.getHabits()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
-    @IBAction func didChangeHabit1(_ sender: UISwitch) {
-        sender.isOn ?
-        mainStore.dispatch(HabitActionComplete(completedHabit: .first)) :
-        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .first))
-    }
-    
-    
-    
-    @IBAction func didChangeHabit2(_ sender: UISwitch) {
-        sender.isOn ?
-        mainStore.dispatch(HabitActionComplete(completedHabit: .second)) :
-        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .second))
-        
-    }
-    
-    
-    @IBAction func didChangeHabit3(_ sender: UISwitch) {
-        sender.isOn ?
-        mainStore.dispatch(HabitActionComplete(completedHabit: .third)) :
-        mainStore.dispatch(HabitActionUncomplete(uncompletedHabit: .third))
-        
-    }
 
-    @IBAction func didChangeHabitTextField(_ sender: UITextField) {
-        switch sender.tag {
-        case 1:
-            habitsLabel[0].text = sender.text
-        case 2:
-            habitsLabel[1].text = sender.text
-        case 3:
-            habitsLabel[2].text = sender.text
-        default:
-            print("Error From TextField In HabitVC")
+    
+}
+
+extension HabitsVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return habits.values.count + 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row < habits.values.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as! HabitCell
+            cell.configure(title: habits.values[indexPath.row].title, counter: 40)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddNewHabitCell", for: indexPath) as! AddNewHabitCell
+            return cell
         }
         
     }
+    
+    
 }
 
 extension HabitsVC: StoreSubscriber {
@@ -70,10 +57,7 @@ extension HabitsVC: StoreSubscriber {
     
     func newState(state: AppState) {
         print("list my Habits:", state.habits)
-        for (i, habit) in state.habits.enumerated()  {
-            habitsProgress[i].progress = habit ? 1.0 : 0.0
-            habitsPercentage[i].text = habit ? "100%" : "0%"
-        }
+        
     }
     
 }

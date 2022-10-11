@@ -51,7 +51,7 @@ class RealmRepository {
     // MARK: - Mood
     
     // MARK: Create
-    func createNewMood() -> Mood {
+    private func createNewMood() -> Mood {
         let mood = Mood()
         do {
             try localRealm.write { localRealm.add(mood) }
@@ -99,7 +99,7 @@ class RealmRepository {
     // MARK: - Tasks
     
     // MARK: Create
-    func createNewTask() -> Tasks {
+    private func createNewTask() -> Tasks {
         let tasks = Tasks()
         do {
             try localRealm.write { localRealm.add(tasks) }
@@ -125,7 +125,7 @@ class RealmRepository {
         do {
             try localRealm.write { tasks.values.append(task) }
         } catch {
-            print("Error: addTaskValue(), with error message: \(error)")
+            print("Error: add(task), with error message: \(error)")
         }
     }
     
@@ -159,5 +159,64 @@ class RealmRepository {
         }
         return nil
     }
+    
+    
+    // MARK: - Habits
+    
+    // MARK: Create
+    private func createNewHabit() -> Habits {
+        let habits = Habits()
+        do {
+            try localRealm.write { localRealm.add(habits) }
+        } catch {
+            print("Error: createNewHabit(), with error message: \(error)")
+        }
+        return habits
+    }
+    
+    
+    // MARK: Read
+    func getHabits() -> Habits {
+        if let habits = localRealm.object(ofType: Habits.self, forPrimaryKey: "Habits") {
+            return habits
+        } else {
+            return createNewHabit()
+        }
+    }
+    
+    // MARK: Update
+    func add(habit: Habit) {
+        let habits = getHabits()
+        do {
+            try localRealm.write { habits.values.append(habit) }
+        } catch {
+            print("Error: add(habit), with error message: \(error)")
+        }
+    }
+    
+    func edit(habit: Habit, newTitle: String) {
+        do {
+            try localRealm.write { habit.title = newTitle}
+        } catch {
+            print("Error: edit(habit,newTitle), with error message: \(error)")
+        }
+    }
+    
+    
+    
+    // MARK: Delete
+    func deleteAllHabits() -> Habits? {
+        if let habits = localRealm.object(ofType: Habits.self, forPrimaryKey: "Habits") {
+            do {
+                try localRealm.write { localRealm.delete(habits) }
+                return habits
+            } catch {
+                print("Error: deleteAllHabits(), with error message: \(error)")
+                return nil
+            }
+        }
+        return nil
+    }
+    
 }
 
